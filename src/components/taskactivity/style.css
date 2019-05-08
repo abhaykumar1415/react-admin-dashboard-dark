@@ -1,0 +1,122 @@
+.task-activity-content{
+  display: flex;
+}
+.task-wrapper{
+  margin: 45px 0px 16px 0px;
+  background-color: #0F1424;
+  color: white;
+  border-radius: 10px;
+  width: 100%;
+  
+}
+
+.activity-wrapper{
+  margin: 45px 0px 16px 25px;
+  background-color: #0F1424;
+  color: white;
+  border-radius: 10px;
+  width: 100%;
+  
+}
+
+.task-activity-header{
+  margin: 23px 0px 0px 31px;
+  font-size: 20px;
+
+}
+
+.list-wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.list-content{
+  border-bottom: 1px solid #262D40;
+  padding:31px 13px 13px 28px;
+}
+
+.selection-wrapper{
+  display: flex;
+}
+
+.margin-right{
+  margin-right: 4px;
+}
+
+.status-pending{
+  border: 1px solid #0F1424;
+  background-color: #212336;
+  border-radius: 14px;
+  font-size: 12px;
+  padding: 3px 23px 0px 23px;
+}
+
+.status-completed{
+  border: 1px solid #0F1424;
+  background-color: #0160E8;
+  border-radius: 14px;
+  font-size: 12px;
+  padding: 2px 16px 0px 16px;
+}
+
+.view-all-button{
+  text-align: center;
+  margin: 25px 0px 25px 0px;
+}
+
+.profile-image{
+  width: 8%;
+  border-radius: 300px;
+  height: 47px;
+  margin-right: 30px;
+  
+}
+
+.activity-content-wrapper::after{
+  content: '';
+  border: 1px solid #272C3F;
+  position: absolute;
+  top: 47px;
+  left: 19px;
+  height: 51px;
+}
+
+.activity-content-wrapper:last-child::after {
+  border: 1px solid transparent;
+}
+
+.activity-content-wrapper{
+  display: flex;
+  margin-bottom: 47px;
+  position: relative;
+}
+
+.description{
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.activity-name{
+  width: 80%;
+}
+
+.activity-proofile-name{
+  color: #0160E8;
+  margin-bottom: 10px;
+ 
+}
+
+.font-weight{
+  font-weight: 700;
+}
+
+.font-size{
+  font-size: 10px;
+}
+
+.task-activity-wrapper{
+  border-bottom: 1px solid #262D40;
+  padding:31px 13px 13px 28px;
+}

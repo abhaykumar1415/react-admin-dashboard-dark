@@ -1,0 +1,24 @@
+body{
+  
+  /* width: 100%; */
+  /* width: calc(100%-14%); */
+}
+.content-header{
+  text-align: left;
+  font-size: 28px;
+  color: white;
+  font-weight: 600;
+  margin: 0px 0px 100px 39px;
+}
+
+.email-statistics{
+  display: flex;
+}
+
+ .main-content-wrapper{
+  width:86% !important; 
+}
+
+.content{
+  padding: 20px 30px;
+}
