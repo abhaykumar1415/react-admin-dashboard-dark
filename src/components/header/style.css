@@ -1,0 +1,56 @@
+body{
+  width: 100%;
+ }
+ .header-wrapper{
+  background-color: #0E1322;
+  display: flex;
+  width:calc(100%-32px);
+  justify-content: space-between;
+  color: white;
+  padding: 16px;
+ }
+ 
+ .search-icon{
+  display: flex;
+  margin-top: 7px;
+  color: white;
+  padding-left: 190px;
+ }
+ 
+ .menu-content-wrapper{
+  display: flex;
+  margin-top: 8px;
+  width: 300px;
+  justify-content: space-evenly;
+ }
+ 
+ .size-30{
+  font-size: 20px;
+  cursor: pointer;
+ }
+ 
+ .font-size{
+  font-size: 13px;
+  margin-top: 2px;
+ }
+ 
+ .color-gray{
+  color: gray;
+  border: 0;
+  font-size: 12px;
+  background-color:#0E1322;
+ }
+ 
+ .margin{
+  margin-right: 4px;
+ }
+ 
+ .profile-wrapper{
+  display: flex;
+ }
+ 
+ /* @media(max-width:1200px){
+  body{
+    border-width: 20px;
+  }
+ } */
