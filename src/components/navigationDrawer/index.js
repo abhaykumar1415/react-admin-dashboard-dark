@@ -11,51 +11,51 @@ export default class NavigationDrawer extends Component {
             <span className="font-clr-whitesmoke user-role">Project Manager</span>
           </div>
         </div>
-        <div classname="drawer-list">
+        <div className="drawer-list">
           <div className="font-clr-white listitem" >
-            <i class="material-icons list-padding">
+            <i className="material-icons list-padding">
               dashboard
             </i>
             <span>DASHBOARD</span>
           </div>
           <div className="font-clr-white listitem" >
-            <i class="material-icons list-padding">
+            <i className="material-icons list-padding">
               apps
             </i>
             <span>Apps</span>
           </div>
           <div className="font-clr-white listitem" >
-            <i class="material-icons list-padding">
+            <i className="material-icons list-padding">
               calendar_today
             </i>
             <span>Calender</span>
           </div>
           <div className="font-clr-white listitem" >
-            <i class="material-icons list-padding">
+            <i className="material-icons list-padding">
               satellite
             </i>
             <span>Components</span>
           </div>
           <div className="font-clr-white listitem" >
-            <i class="material-icons list-padding">
+            <i className="material-icons list-padding">
               pages
             </i>
             <span>Pages</span>
           </div>
           <div className="font-clr-white listitem" >
-            <i class="material-icons list-padding">
+            <i className="material-icons list-padding">
               wb_sunny
             </i>
             <span>Icons</span>
           </div>
           <div className="font-clr-white listitem" >
-            <i class="material-icons list-padding">
+            <i className="material-icons list-padding">
               place
             </i>
             <span>Location</span>
           </div>
           <div className="font-clr-white listitem" >
-            <i class="material-icons list-padding">
+            <i className="material-icons list-padding">
               adb
             </i>
             <span>Mobile View</span>

@@ -1,22 +1,21 @@
-.statistics-wrapper{
+.statistics-wrapper {
   background-color: #0F1424;
   color: white;
   margin-left: 3%;
   border-radius: 10px;
   padding: 33px 0px 87px 28px;
-  /* width: 100%; */
+  width: 50%;
 }
 
-.email-header{
-font-size: 20px; 
+.statistics-header {
+  font-size: 20px; 
 }
 
-.color{
-color: #FBFFFF;
+.color {
+  color: #FBFFFF;
 }
 
-.rate
-{
+.rate {
   display: flex;
   justify-content: space-between;
   margin-top: 38px;
@@ -24,25 +23,21 @@ color: #FBFFFF;
   width: 81%;
 }
 
-.myProgress 
-{
+.myProgress {
   width: 82%;
   background-color: gray;
   margin-top: 13px;
   border-radius: 12px;
 }
 
-.myBar 
-{
-  width: 75%;
+.myBar {
   height: 4px;
   background-color: #0160E8;
   border-radius: 17px;
   line-height: 30px;
 }
 
-.rate-time
-{
+.rate-time {
   display: flex;
   justify-content: space-between;
   margin-top: 9px;
@@ -50,7 +45,6 @@ color: #FBFFFF;
   width: 81%;
 }
 
-.percentage
-{
+.percentage {
   font-size: 20px;
 }

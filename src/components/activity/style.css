@@ -1,22 +1,9 @@
-.task-activity-content{
-  display: flex;
-}
-.task-wrapper{
-  margin: 45px 0px 16px 0px;
-  background-color: #0F1424;
-  color: white;
-  border-radius: 10px;
-  width: 100%;
-  
-}
-
 .activity-wrapper{
   margin: 45px 0px 16px 25px;
   background-color: #0F1424;
   color: white;
   border-radius: 10px;
-  width: 100%;
-  
+  width: 50%;
 }
 
 .task-activity-header{
@@ -49,7 +36,7 @@
   background-color: #212336;
   border-radius: 14px;
   font-size: 12px;
-  padding: 3px 23px 0px 23px;
+  padding: 3px 23px 4px 23px;
 }
 
 .status-completed{
@@ -57,12 +44,13 @@
   background-color: #0160E8;
   border-radius: 14px;
   font-size: 12px;
-  padding: 2px 16px 0px 16px;
+  padding: 2px 16px 4px 16px;
 }
 
 .view-all-button{
   text-align: center;
   margin: 25px 0px 25px 0px;
+  cursor: pointer;
 }
 
 .profile-image{
@@ -105,7 +93,6 @@
 .activity-proofile-name{
   color: #0160E8;
   margin-bottom: 10px;
- 
 }
 
 .font-weight{
@@ -116,7 +103,7 @@
   font-size: 10px;
 }
 
-.task-activity-wrapper{
+.activity-list{
   border-bottom: 1px solid #262D40;
   padding:31px 13px 13px 28px;
 }

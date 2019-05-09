@@ -4,16 +4,36 @@ import Header from './components/header'
 import NavigationDrawer from './components/navigationDrawer';
 import Content from './components/content';
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <div className="content-navigation-wrapper">
-        <NavigationDrawer />
-        <Content />
+export class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isClicked: false
+    }
+  }
+
+
+  handelClick = () => {
+    console.log("dfghjk");
+    this.setState({ isClicked: !this.state.isClicked });
+  }
+  render() {
+    return (
+      <div className="App" >
+        <Header
+          isClicked={this.state.isClicked}
+          handelClick={this.handelClick}
+        />
+        <div className="content-navigation-wrapper">
+          <NavigationDrawer />
+          <Content />
+        </div>
+        {
+          this.state.isClicked === true ? <button className="logout-btn">Logout</button> : null
+        }
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;

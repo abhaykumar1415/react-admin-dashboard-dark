@@ -1,23 +1,10 @@
-.email-statistics-content{
-  display: flex;
-  /* width: 140%; */
-}
 .email-wrapper{
   background-color: #0F1424;
   color: white;
   /* margin-left: 3%; */
   border-radius: 10px;
   padding: 33px 0px 87px 28px;
-  width: 100%;
-}
-
-.statistics-wrapper{
-  background-color: #0F1424;
-  color: white;
-  margin-left: 3%;
-  border-radius: 10px;
-  padding: 33px 0px 87px 28px;
-  width: 100%;
+  width: 50%;
 }
 
 .email-header{

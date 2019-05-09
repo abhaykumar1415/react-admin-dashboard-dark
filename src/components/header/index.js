@@ -1,6 +1,17 @@
 import React, { Component } from 'react'
 import './style.css';
 export default class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      // isClicked: false
+    }
+  }
+
+  // handelClick = () => {
+  //   console.log("dfghjk");
+  //   this.setState({ isClicked: !this.state.isClicked });
+  // }
 
   render() {
     return (
@@ -8,7 +19,7 @@ export default class Header extends Component {
         <div className="header-wrapper">
           <div className="search-icon ">
             <div className="color-gray margin" >
-              <i class="material-icons">
+              <i className="material-icons">
                 search
               </i>
             </div>
@@ -19,32 +30,25 @@ export default class Header extends Component {
             </div>
           </div>
           <div className="menu-content-wrapper">
-            <div>
-              <i class="material-icons size-30">
-                mail_outline
-              </i>
-            </div>
-            <div>
-              <i class="material-icons size-30">
-                notifications_none
-              </i>
-            </div>
+            <i className="material-icons size-30">
+              mail_outline
+            </i>
+            <i className="material-icons size-30">
+              notifications_none
+            </i>
             <div className="profile-wrapper">
-              <div>
-                <i class="material-icons size-30 margin">
-                  account_circle
-                 </i>
-              </div>
+              <img src={require('../../images/profile.png')} alt="profile" className="profile-img-header" />
               <div className="font-size">
-                Leonid Aristov
+                <h4> Leonid Aristov</h4>
               </div>
-              <div><i class="material-icons size-30 margin">
-                arrow_drop_down
+              <div className="logout">
+                <i className="material-icons size-30 margin " onClick={this.props.handelClick} >
+                  arrow_drop_down
                 </i>
               </div>
             </div>
             <div>
-              <i class="material-icons size-30">
+              <i className="material-icons size-30">
                 menu
               </i>
             </div>

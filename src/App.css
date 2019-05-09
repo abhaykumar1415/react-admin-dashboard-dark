@@ -11,3 +11,17 @@
   flex-direction: row;
   padding-top: 45px;
 }
+
+.logout-btn{
+  background-color: #095CDC;
+  height: 45px;
+  position: absolute;
+  left: 1268px;
+  top: 60px;
+  width: 100px;
+  color: white;
+  font-size: 17px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-weight: 600;
+}
