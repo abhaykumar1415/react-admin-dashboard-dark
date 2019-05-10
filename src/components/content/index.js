@@ -4,6 +4,8 @@ import Email from '../email';
 import Task from '../task';
 import Statistics from '../statistics';
 import Activity from '../activity';
+// import ButtonWrapper from '../buttonwrapper';
+// import ButtonLayoutContainer from '../buttonlayoutcontainer';
 export default class Content extends Component {
   constructor(props) {
     super(props);
@@ -111,9 +113,7 @@ export default class Content extends Component {
     return (
       <div className="main-content-wrapper" >
         <div className="main-content">
-          <div className="content-header">
-            Dashboard
-        </div>
+          {/* <ButtonLayoutContainer /> */}
           <div className="content">
             <div className="email-statistics">
               <Email

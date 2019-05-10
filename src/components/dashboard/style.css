@@ -1,10 +1,11 @@
 .content{
-  margin:30px 45px;
+  margin:38px 45px;
 }
 .dashboard-header{
   color: white;
   font-size: 30px;
   padding-bottom: 70px;
+  font-weight: 600;
 }
 
 .chart{
@@ -77,3 +78,38 @@
   justify-content: space-between;
   margin-top:50px;
 }
+
+
+/* mayuri */
+
+.content-header{
+  text-align: left;
+  font-size: 28px;
+  color: white;
+  font-weight: 600;
+  margin: 0px 0px 100px 39px;
+}
+
+.main-content{
+  margin-top: 62px;
+}
+
+.email-statistics{
+  display: flex;
+  width: 100%;
+}
+
+.task-activity{
+  display: flex;
+  width: 100%;
+}
+
+.main-content-wrapper{
+  width:86% !important; 
+}
+
+/* .content-four-tasks{
+  padding: 20px 0px 0px 30px;
+  display: flex;
+  flex-direction: column;
+} */

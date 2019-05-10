@@ -1,0 +1,50 @@
+.statistics-wrapper {
+  background-color: #0F1424;
+  color: white;
+  margin-left: 3%;
+  border-radius: 10px;
+  padding: 33px 0px 87px 28px;
+  width: 50%;
+}
+
+.statistics-header {
+  font-size: 20px; 
+}
+
+.color {
+  color: #FBFFFF;
+}
+
+.rate {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 38px;
+  font-size: 12px;
+  width: 81%;
+}
+
+.myProgress {
+  width: 82%;
+  background-color: gray;
+  margin-top: 13px;
+  border-radius: 12px;
+}
+
+.myBar {
+  height: 4px;
+  background-color: #0160E8;
+  border-radius: 17px;
+  line-height: 30px;
+}
+
+.rate-time {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9px;
+  font-size: 12px;
+  width: 81%;
+}
+
+.percentage {
+  font-size: 20px;
+}

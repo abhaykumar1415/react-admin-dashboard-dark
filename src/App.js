@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import NavigationDrawer from './components/navigationDrawer';
 import Header from './components/header';
-import Content from './components/dashboard';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Dashboard from './components/dashboard';
@@ -17,6 +16,7 @@ export default class App extends Component {
   constructor() {
     super();
     this.state = {
+      isClicked: false,
       active_menu_item: 'dashboard',
       clr_arr: [],
       visitor_data: {
@@ -32,6 +32,11 @@ export default class App extends Component {
     }
   }
 
+  handelClick = () => {
+    console.log("dfghjk");
+    this.setState({ isClicked: !this.state.isClicked });
+  }
+
   updateActiveMenu = (active_menu_item) => {
     this.setState({ active_menu_item });
   }
@@ -44,8 +49,14 @@ export default class App extends Component {
   render() {
     console.log("active-menu :", this.state.active_menu_item);
     return (
-      <div>
-        <Header />
+      <div className="app">
+        <Header
+          isClicked={this.state.isClicked}
+          handelClick={this.handelClick}
+        />
+        {
+          this.state.isClicked === true ? <button className="logout-btn">Logout</button> : null
+        }
         <Router>
           <div className="content-wrapper">
             <NavigationDrawer
@@ -103,3 +114,24 @@ export default class App extends Component {
     )
   }
 }
+
+
+
+// render() {
+//   return (
+//     <div className="App" >
+//       <Header
+//         isClicked={this.state.isClicked}
+//         handelClick={this.handelClick}
+//       />
+//       <div className="content-navigation-wrapper">
+//         <NavigationDrawer />
+//         <Content />
+//       </div>
+//       {
+//         this.state.isClicked === true ? <button className="logout-btn">Logout</button> : null
+//       }
+//     </div>
+//   );
+// }
+// }

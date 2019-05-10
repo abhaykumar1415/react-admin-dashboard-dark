@@ -1,4 +1,14 @@
 .content-wrapper{
   display: flex; 
   background-color: #262D40;
+  padding-top: 40px;
+}
+.logout-btn{
+  width: 100px;
+  height: 40px;
+  background-color: blue;
+  position: absolute;
+  top: 60px;
+  left: 1272px;
+  border-radius: 20px;
 }
