@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './components/header'
 import NavigationDrawer from './components/navigationDrawer';
-import Content from './components/content';
+import Dashboard from './components/dashboard';
 
 export class App extends React.Component {
   constructor(props) {
@@ -11,7 +11,6 @@ export class App extends React.Component {
       isClicked: false
     }
   }
-
 
   handelClick = () => {
     console.log("dfghjk");
@@ -26,7 +25,7 @@ export class App extends React.Component {
         />
         <div className="content-navigation-wrapper">
           <NavigationDrawer />
-          <Content />
+          <Dashboard />
         </div>
         {
           this.state.isClicked === true ? <button className="logout-btn">Logout</button> : null

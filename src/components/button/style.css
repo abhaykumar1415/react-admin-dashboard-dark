@@ -1,0 +1,39 @@
+.Outline{
+  padding: 11px 32px;
+  font-weight: 400;
+}
+
+.font-size-small{
+  font-size: small;
+}
+
+.button-content-wrapper{
+  margin-right: 38px;
+}
+.button-content-wrapper:nth-child(2) button {
+  color: black !important;
+}
+
+.Filled{
+  border-radius: 5px;
+  /* background-color: blue; */
+  color:white;
+  padding: 11px 32px;
+}
+
+.Rounded-Outline{
+  border-radius: 5px;
+  /* background-color: blue; */
+  color:white;
+  padding: 11px 32px;
+}
+
+.Rounded-Filled{
+
+}
+
+.btn{
+  font-size: small;
+  padding: 11px 32px;
+  font-weight: 400;
+}
