@@ -3,9 +3,14 @@ import NavigationDrawer from './components/navigationDrawer';
 import Header from './components/header';
 import Content from './components/dashboard';
 import './App.css';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Dashboard from './components/dashboard';
 import Form from './components/forms';
+import Apps from './components/apps';
+import Calender from './components/calender';
+import ButtonLayoutContainer from './components/buttonlayoutcontainer';
+import Pages from './components/pages';
+import Icons from './components/icons';
 
 export default class App extends Component {
 
@@ -33,7 +38,6 @@ export default class App extends Component {
 
   componentDidMount = () => {
     let clr_arr = ["#db1c58", "#56f442", "#e8d90d"];
-    console.log("data arr", clr_arr);
     this.setState({ clr_arr: clr_arr });
   }
 
@@ -42,40 +46,59 @@ export default class App extends Component {
     return (
       <div>
         <Header />
-        <div className="content-wrapper">
-          <NavigationDrawer
-            userdata={this.state.userProfile}
-            active_menu_item={this.state.active_menu_item}
-            updateActiveMenu={this.updateActiveMenu}
-          />
+        <Router>
+          <div className="content-wrapper">
+            <NavigationDrawer
+              userdata={this.state.userProfile}
+              active_menu_item={this.state.active_menu_item}
+              updateActiveMenu={this.updateActiveMenu}
+            />
 
-          <Router>
-            <div>
-              {/* <Route path="/"
-                component={() => <Dashboard clr_arr={this.state.clr_arr} data={this.state.visitor_data} />}
+            <Switch>
+
+              <Route exact path="/"
+                render={props => (<Dashboard clr_arr={this.state.clr_arr} data={this.state.visitor_data} />)}
+              />
+
+              <Route path="/dashboard"
+                render={props => (<Dashboard clr_arr={this.state.clr_arr} data={this.state.visitor_data} />)}
+              />
+
+              <Route path="/apps"
+                render={props => (<Apps />)}
+              />
+
+              <Route path="/calender"
+                render={props => (<Calender />)}
+              />
+
+              <Route path="/components"
+                render={props => (<ButtonLayoutContainer />)}
+              />
+
+              <Route path="/pages"
+                render={props => (<Pages />)}
+              />
+
+              <Route path="/forms"
+                render={props => (<Form />)}
+              />
+
+              <Route path="/icons"
+                render={props => (<Icons />)}
+              />
+
+              {/* <Route path="/location"
+                render={props => (<Location />)}
+              />
+
+              <Route path="/mobileview"
+                render={props => (<MobileView />)}
               /> */}
 
-              {this.state.active_menu_item === "dashboard" &&
-                <Route exact path="/dashboard" component={() => <Dashboard clr_arr={this.state.clr_arr} data={this.state.visitor_data} />} />
-              }
-
-              {/* {
-                this.state.active_menu_item === "dashboard" ?
-
-                  <Route path="/dashboard" component={() => <Dashboard clr_arr={this.state.clr_arr} data={this.state.visitor_data} />} />
-                  : null
-              }
-
-              {
-                this.state.active_menu_item === "forms" ?
-
-                  <Route path="/forms" component={Form} />
-                  : null
-              } */}
-
-            </div>
-          </Router>
-        </div>
+            </Switch>
+          </div>
+        </Router>
       </div>
     )
   }
