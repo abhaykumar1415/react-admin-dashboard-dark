@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import './style.css';
-import Email from '../email';
-import Task from '../task';
-import Statistics from '../statistics';
-import Activity from '../activity';
-export default class Content extends Component {
+// import Email from '../email';
+// import Task from '../task';
+// import Statistics from '../statistics';
+// import Activity from '../activity';
+import ButtonLayoutContainer from '../buttonlayoutcontainer';
+export default class Dashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -111,10 +112,8 @@ export default class Content extends Component {
     return (
       <div className="main-content-wrapper" >
         <div className="main-content">
-          <div className="content-header">
-            Dashboard
-        </div>
-          <div className="content">
+          <ButtonLayoutContainer />
+          {/* <div className="content">
             <div className="email-statistics">
               <Email
                 email_content={this.state.first_content}
@@ -131,7 +130,7 @@ export default class Content extends Component {
                 activity_content={this.state.fourth_content}
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     )

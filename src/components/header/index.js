@@ -1,18 +1,6 @@
 import React, { Component } from 'react'
 import './style.css';
 export default class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      // isClicked: false
-    }
-  }
-
-  // handelClick = () => {
-  //   console.log("dfghjk");
-  //   this.setState({ isClicked: !this.state.isClicked });
-  // }
-
   render() {
     return (
       <div className="main-wrapper">
