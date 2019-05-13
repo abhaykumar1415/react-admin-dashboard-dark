@@ -12,6 +12,7 @@
 
 .email-statistics{
   width: 100%;
+  display: flex;
 }
 
 .task-activity{

@@ -14,3 +14,14 @@
 .button-layout-container{
   padding-top: 15px;
 }
+
+.button_with_sizes{
+  display: flex;
+  background-color: #101420;
+  margin-bottom: 2px;
+  padding: 22px 26px;
+}
+
+.margin-right{
+  margin-right: 234px;
+}
