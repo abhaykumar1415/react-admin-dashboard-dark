@@ -1,0 +1,16 @@
+.color-white{
+  color: white;
+}
+
+.button-header{
+  font-size: xx-large;
+  margin-bottom: 8px;
+}
+
+.font-size-small{
+  font-size: small;
+}
+
+.button-layout-container{
+  padding-top: 15px;
+}

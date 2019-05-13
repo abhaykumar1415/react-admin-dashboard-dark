@@ -1,0 +1,38 @@
+.color-white{
+  color: white;
+}
+
+.color-black{
+  color: black;
+}
+.font-size-small{
+  font-size: small;
+}
+
+.font-weight{
+  font-weight: 600;
+}
+
+.button-style{
+  margin-top: 50px;
+}
+
+.button-style-wrapper{
+  background-color: #D6D6D6;
+  padding: 15px 0px 20px 25px;
+  margin-bottom: 2px;
+  border-radius: 2px;
+}
+
+.square-outline{
+  padding: 11px 32px;
+  font-weight: 400;
+}
+
+.margin-bottom{
+  margin-bottom: 20px;
+}
+
+.buttons-wrapper{
+  display: flex;
+}
