@@ -1,3 +1,7 @@
+.content-wrapper{
+  display: flex; 
+  background-color: #262D40;
+}
 .App{
   width: 100%;
   /* display: flex;
@@ -7,21 +11,14 @@
 .content-navigation-wrapper{
   display: flex;
   background-color: #262D40;
-  width: 100%;
-  flex-direction: row;
-  padding-top: 45px;
+  padding-top: 40px;
 }
-
 .logout-btn{
-  background-color: #095CDC;
-  height: 45px;
-  position: absolute;
-  left: 1268px;
-  top: 60px;
   width: 100px;
-  color: white;
-  font-size: 17px;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  font-weight: 600;
+  height: 40px;
+  background-color: blue;
+  position: absolute;
+  top: 60px;
+  left: 1272px;
+  border-radius: 20px;
 }

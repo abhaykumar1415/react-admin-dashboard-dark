@@ -1,16 +1,16 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import './style.css';
 export default class Header extends Component {
   render() {
     return (
       <div className="main-wrapper">
         <div className="header-wrapper">
-          <div className="search-icon ">
+          <div className="search-icon margin">
             <div className="color-gray margin" >
-              <i className="material-icons">
+              <i class="material-icons font-size-30">
                 search
-              </i>
-            </div>
+             </i>
+            </div >
             <div >
               <input className="color-gray"
                 type="search"
