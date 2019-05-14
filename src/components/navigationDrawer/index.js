@@ -1,12 +1,22 @@
 import React, { Component } from 'react'
 import './style.css';
 import UserProfile from '../userprofileblock';
-import { Link, BrowserRouter as Router } from 'react-router-dom';
+import { Link, BrowserRouter as Router, Route } from 'react-router-dom';
+import FormLayout from '../formlayout';
 
 export default class NavigationDrawer extends Component {
-
+  constructor() {
+    super();
+    this.state = {
+      form_submenu: false
+    }
+  }
   updateActiveMenu = (menu) => {
+    if (menu === 'forms') {
+      this.setState({ form_submenu: !this.state.form_submenu })
+    }
     this.props.updateActiveMenu(menu);
+
   }
   render() {
     return (
@@ -15,7 +25,7 @@ export default class NavigationDrawer extends Component {
         <div className="drawer-list">
 
           <Link to='/dashboard' style={{ textDecoration: 'none' }}>
-            <div className="font-clr-white listitem">
+            <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("dashboard")}>
               <i class="material-icons list-icon-padding">
                 dashboard
             </i>
@@ -27,7 +37,7 @@ export default class NavigationDrawer extends Component {
           </Link>
 
           <Link to='/apps' style={{ textDecoration: 'none' }}>
-            <div className="font-clr-white listitem" >
+            <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("apps")}>
               <i class="material-icons list-icon-padding">
                 apps
             </i>
@@ -75,16 +85,42 @@ export default class NavigationDrawer extends Component {
           </Link>
 
           <Link to='/forms' style={{ textDecoration: 'none' }}>
-            <div className="font-clr-white listitem" >
+            <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("forms")}>
               <i class="material-icons list-icon-padding">
                 file_copy
-            </i>
+              </i>
               <div className="list-item-width">Forms</div>
-              <i class="material-icons list-item-arrow">
-                chevron_right
-            </i>
+              {
+                this.state.form_submenu ?
+                  <i class="material-icons list-item-arrow">
+                    expand_more
+                  </i>
+                  :
+                  <i class="material-icons list-item-arrow">
+                    chevron_right
+                  </i>
+              }
             </div>
           </Link>
+
+          {
+            this.state.form_submenu ?
+              <div className="subitems">
+                {
+                  this.props.subform.map((item, index) => {
+                    return (
+                      <div>
+                        <Link to={'/form/' + index} style={{ textDecoration: 'none' }}>
+                          <div key={index} className="list-subitem font-clr-white">{item.title}</div>
+                        </Link>
+                      </div>
+
+                    )
+                  })
+                }
+              </div>
+              : null
+          }
 
           <Link to='/icons' style={{ textDecoration: 'none' }}>
             <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("icons")}>

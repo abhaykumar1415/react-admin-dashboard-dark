@@ -1,0 +1,84 @@
+.basic_form-wrapper{
+  background-color: #0E1322 ;
+  height: 500px;
+  width:40%;
+}
+
+.form-header{
+  font-size: 15px;
+  color: white;
+  padding:10px;
+  text-align: center;
+  background-color: black;
+}
+
+.form-content{
+  padding:25px 35px 25px 35px;
+}
+
+.names{
+  display:flex;
+  justify-content: space-between;
+}
+
+.text-input{
+  border:none;
+  background-color: #0E1322;
+  border-bottom:1px solid #545A68;
+  width:100%;
+  padding:10px 0px;
+}
+
+.contact-verify{
+  padding:10px;
+}
+
+.checkbox-grp{
+  display:flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 30px;
+}
+
+h5{
+  color:#545A68;
+  padding-left: 5px;
+}
+
+.verify-data{
+  display: flex;
+  align-items: center;
+  width: 150px;
+}
+
+.text-fileds{
+  padding:10px 10px 15px 10px;
+}
+
+.input-placeholder{
+  color:#545A68;
+  padding:10px 10px 10px 0px;
+  font-size:12px;
+}
+
+.form-buttons{
+  padding:30px;
+  text-align: center;
+}
+
+.form-btn{
+  width:100px;
+  height:40px;
+  border-radius: 5px;
+  color:white;
+  margin:10px;
+  border: none;
+}
+
+.cancel-btn-clr{
+  background-color: #3E3F53;
+}
+
+.login-btn-clr{
+  background-color:blue; 
+}
