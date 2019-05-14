@@ -7,7 +7,7 @@ export default class ButtonWrapper extends Component {
     //console.log("one comp. data :" + this.props.data + " title :" + this.props.title)
     return (
       <div className="button-style-wrapper color-white">
-        <div className="font-size-small font-weight margin-bottom  ">{this.props.title}</div>
+        <div className="font-size-small font-weight margin-bottom">{this.props.title}</div>
         <div className="buttons-wrapper">
           {
             this.props.type === 'button_styles' ?
@@ -16,7 +16,7 @@ export default class ButtonWrapper extends Component {
                   <Button key={index}
                     title={item.title}
                     color={item.color}
-                    buttontype={this.props.title}
+                    buttonType={this.props.title}
                   />
                 )
               }) : null
@@ -30,8 +30,8 @@ export default class ButtonWrapper extends Component {
                   <Button
                     key={index}
                     title={item.title}
-                    btn_color={this.props.button_size_color}
-                    buttontype={item.title}
+                    btn_bg_color={this.props.button_size_color}
+                    buttonType={item.title}
                   />
                 )
               })

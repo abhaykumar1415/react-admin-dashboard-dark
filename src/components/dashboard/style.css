@@ -1,3 +1,87 @@
+.content{
+  margin:60px 45px;
+}
+.dashboard-header{
+  color: white;
+  font-size: 30px;
+  padding-bottom: 70px;
+  font-weight: 600;
+}
+
+.chart{
+  /* margin:10px;
+  background-color: black; */
+  width: 1100px !important;
+  height: 300px !important;
+   /* background-color: black;  */
+  /* margin: 35px 0px 0px 50px; */
+}
+.product-scale-heading{
+  color: white; 
+}
+.product-scale{
+  background-color: #0E1322; 
+  width: 100%;
+  /* margin: 30px 40px; */
+  border-radius: 10px;
+}
+.product-scale-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+.product-scale-yr-list{
+  background-color: blue;
+  border: none;
+  color: white;
+  width: 53px;
+  height: 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 3px;
+}
+.visitors{
+  background-color: #0E1322;
+  width:28%;
+  border-radius: 10px;
+  padding: 15px;
+}
+.visitor-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 5px 25px 5px;
+}
+.eye-icon{
+  padding: 10px;
+  font-size: 40px;
+}
+.visitor-icon{
+  width: 60px;
+  height: 60px;
+  /* background-color: #3cdcea; */
+  /* margin: 15px 0px 25px 0px; */
+  border-radius: 100px;
+}
+.visit-no{
+  /* color: #3cdcea; */
+  font-size:30px;
+  font-weight: bold;
+}
+.font-white{
+  color: whitesmoke;
+  font-size:14px;
+}
+.visitor-info{
+  display: flex;
+  justify-content: space-between;
+  margin-top:50px;
+}
+
+
+/* mayuri */
+
 .content-header{
   text-align: left;
   font-size: 28px;
@@ -7,10 +91,11 @@
 }
 
 .main-content{
-  padding: 30px;
+  margin-top: 62px;
 }
 
 .email-statistics{
+  display: flex;
   width: 100%;
   display: flex;
 }
@@ -24,9 +109,8 @@
   width:86% !important; 
 }
 
-.content{
+/* .content-four-tasks{
   padding: 20px 0px 0px 30px;
   display: flex;
   flex-direction: column;
-}
-
+} */

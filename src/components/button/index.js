@@ -1,24 +1,19 @@
 import React, { Component } from 'react'
 import './style.css';
 export default class Button extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      buttontype: ''
-    }
-  }
+
   render() {
-    var btnStyle;
+    let btnStyle;
     console.log("props", this.props.btn_colors ? this.props.btn_colors : null);
-    switch (this.props.buttontype) {
-      case "Outline": btnStyle = {
-        border: "1px solid" + this.props.color,
-        color: this.props.color,
-        borderRadius: '4px',
-        fontSize: 'small',
-        padding: '11px 32px',
-        fontWeight: '500'
-      };
+    switch (this.props.buttonType) {
+      case "Outline":
+        btnStyle = {
+          border: "1px solid" + this.props.color,
+          color: this.props.color,
+          fontSize: 'small',
+          padding: '11px 32px',
+          fontWeight: '500'
+        };
         break;
       case "Filled": btnStyle = {
         backgroundColor: this.props.color,
@@ -47,8 +42,8 @@ export default class Button extends Component {
       };
         break;
       case "XS": btnStyle = {
-        backgroundColor: this.props.btn_color.backgroundColor,
-        color: this.props.btn_color.text_color,
+        backgroundColor: this.props.btn_bg_color.backgroundColor,
+        color: this.props.btn_bg_color.text_color,
         fontSize: '12px',
         border: '1px solid transparent',
         padding: '7px 26px',
@@ -58,8 +53,8 @@ export default class Button extends Component {
       };
         break;
       case "small": btnStyle = {
-        backgroundColor: this.props.btn_color.backgroundColor,
-        color: this.props.btn_color.text_color,
+        backgroundColor: this.props.btn_bg_color.backgroundColor,
+        color: this.props.btn_bg_color.text_color,
         fontSize: '12px',
         border: '1px solid transparent',
         padding: '7px 30px',
@@ -69,8 +64,8 @@ export default class Button extends Component {
       };
         break;
       case "default": btnStyle = {
-        backgroundColor: this.props.btn_color.backgroundColor,
-        color: this.props.btn_color.text_color,
+        backgroundColor: this.props.btn_bg_color.backgroundColor,
+        color: this.props.btn_bg_color.text_color,
         fontSize: '12px',
         border: '1px solid transparent',
         padding: '9px 34px',
@@ -80,8 +75,8 @@ export default class Button extends Component {
       };
         break;
       case "large": btnStyle = {
-        backgroundColor: this.props.btn_color.backgroundColor,
-        color: this.props.btn_color.text_color,
+        backgroundColor: this.props.btn_bg_color.backgroundColor,
+        color: this.props.btn_bg_color.text_color,
         fontSize: '18px',
         border: '1px solid transparent',
         padding: '11px 42px',
