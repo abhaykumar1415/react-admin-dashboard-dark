@@ -4,7 +4,7 @@ import './style.css';
 export default class IconicForm extends Component {
   render() {
     return (
-      <div className="basic_form-wrapper">
+      <div className="basic-form-wrapper">
         <div className="form-header"><h1>Iconic Form</h1></div>
         <div className="form-content">
           <div className="text-fileds iconic-text-fields">

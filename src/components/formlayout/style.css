@@ -1,6 +1,9 @@
-.forms{
+.basic-iconic-forms{
   display: flex;
-  justify-content: space-around;
-  padding: 30px;
-  width: 100%;
+  justify-content: space-evenly;
+  margin: 25px 0px 50px 0px;
+}
+
+.forms{
+  width: 80%;
 }

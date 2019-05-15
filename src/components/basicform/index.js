@@ -9,7 +9,7 @@ export default class BasicForm extends Component {
 
   render() {
     return (
-      <div className="basic_form-wrapper">
+      <div className="basic-form-wrapper">
         <div className="form-header"><h1>Basic Form</h1></div>
         <div className="form-content">
           <div className="names">
