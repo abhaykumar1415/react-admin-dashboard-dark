@@ -12,7 +12,7 @@ export default class UserProfile extends Component {
     return (
       <div className="drawer-profile">
         <div className="image-profile-name">
-          <img src={require('../../images/profile.png')} className="profile-img" />
+          <img src={require('../../images/profile.png')} alt="profile" className="profile-img" />
           <div className="profile-name">
             <span className="font-clr-white">{this.props.data.name}</span><br />
             <span className="font-clr-whitesmoke user-role">{this.props.data.role}</span>

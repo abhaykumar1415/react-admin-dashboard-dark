@@ -16,11 +16,11 @@ export default class NavigationDrawer extends Component {
 
           <Link to='/dashboard' style={{ textDecoration: 'none' }}>
             <div className="font-clr-white listitem">
-              <i class="material-icons list-icon-padding">
+              <i className="material-icons list-icon-padding">
                 dashboard
             </i>
               <div>DASHBOARD</div>
-              <i class="material-icons list-item-arrow">
+              <i className="material-icons list-item-arrow">
                 chevron_right
             </i>
             </div>
@@ -28,11 +28,11 @@ export default class NavigationDrawer extends Component {
 
           <Link to='/apps' style={{ textDecoration: 'none' }}>
             <div className="font-clr-white listitem" >
-              <i class="material-icons list-icon-padding">
+              <i className="material-icons list-icon-padding">
                 apps
             </i>
               <div className="list-item-width">Apps</div>
-              <i class="material-icons list-item-arrow">
+              <i className="material-icons list-item-arrow">
                 chevron_right
             </i>
             </div>
@@ -40,11 +40,11 @@ export default class NavigationDrawer extends Component {
 
           <Link to='/calender' style={{ textDecoration: 'none' }}>
             <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("calender")}>
-              <i class="material-icons list-icon-padding">
+              <i className="material-icons list-icon-padding">
                 calendar_today
             </i>
               <div className="list-item-width">Calender</div>
-              <i class="material-icons list-item-arrow">
+              <i className="material-icons list-item-arrow">
                 chevron_right
             </i>
             </div>
@@ -52,11 +52,11 @@ export default class NavigationDrawer extends Component {
 
           <Link to='/components' style={{ textDecoration: 'none' }}>
             <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("components")}>
-              <i class="material-icons list-icon-padding">
+              <i className="material-icons list-icon-padding">
                 satellite
             </i>
               <div className="list-item-width">Components</div>
-              <i class="material-icons list-item-arrow">
+              <i className="material-icons list-item-arrow">
                 chevron_right
             </i>
             </div>
@@ -64,11 +64,11 @@ export default class NavigationDrawer extends Component {
 
           <Link to='/pages' style={{ textDecoration: 'none' }}>
             <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("pages")}>
-              <i class="material-icons list-icon-padding">
+              <i className="material-icons list-icon-padding">
                 pages
             </i>
               <div className="list-item-width">Pages</div>
-              <i class="material-icons list-item-arrow">
+              <i className="material-icons list-item-arrow">
                 chevron_right
             </i>
             </div>
@@ -76,11 +76,23 @@ export default class NavigationDrawer extends Component {
 
           <Link to='/forms' style={{ textDecoration: 'none' }}>
             <div className="font-clr-white listitem" >
-              <i class="material-icons list-icon-padding">
+              <i className="material-icons list-icon-padding">
                 file_copy
             </i>
               <div className="list-item-width">Forms</div>
-              <i class="material-icons list-item-arrow">
+              <i className="material-icons list-item-arrow">
+                chevron_right
+            </i>
+            </div>
+          </Link>
+
+          <Link to='/table' style={{ textDecoration: 'none' }}>
+            <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("table")}>
+              <i className="material-icons list-icon-padding">
+                pages
+               </i>
+              <div className="list-item-width">Table</div>
+              <i className="material-icons list-item-arrow">
                 chevron_right
             </i>
             </div>
@@ -88,11 +100,11 @@ export default class NavigationDrawer extends Component {
 
           <Link to='/icons' style={{ textDecoration: 'none' }}>
             <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("icons")}>
-              <i class="material-icons list-icon-padding">
+              <i className="material-icons list-icon-padding">
                 wb_sunny
             </i>
               <div className="list-item-width">Icons</div>
-              <i class="material-icons list-item-arrow">
+              <i className="material-icons list-item-arrow">
                 chevron_right
             </i>
             </div>
@@ -100,11 +112,11 @@ export default class NavigationDrawer extends Component {
 
           <Link to='/location' style={{ textDecoration: 'none' }}>
             <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("location")}>
-              <i class="material-icons list-icon-padding">
+              <i className="material-icons list-icon-padding">
                 place
             </i>
               <div className="list-item-width">Location</div>
-              <i class="material-icons list-item-arrow">
+              <i className="material-icons list-item-arrow">
                 chevron_right
             </i>
             </div>
@@ -112,11 +124,11 @@ export default class NavigationDrawer extends Component {
 
           <Link to='/mobileview' style={{ textDecoration: 'none' }}>
             <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("mobileview")}>
-              <i class="material-icons list-icon-padding">
+              <i className="material-icons list-icon-padding">
                 adb
             </i>
               <div className="list-item-width">Mobile View</div>
-              <i class="material-icons list-item-arrow">
+              <i className="material-icons list-item-arrow">
                 chevron_right
             </i>
             </div>

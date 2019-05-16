@@ -10,6 +10,7 @@ import Calender from './components/calender';
 import ButtonLayoutContainer from './components/buttonlayoutcontainer';
 import Pages from './components/pages';
 import Icons from './components/icons';
+import Table from './components/table';
 
 export default class App extends Component {
 
@@ -93,6 +94,10 @@ export default class App extends Component {
 
               <Route path="/forms"
                 render={props => (<Form />)}
+              />
+
+              <Route path="/table"
+                render={props => (<Table />)}
               />
 
               <Route path="/icons"

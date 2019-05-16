@@ -7,7 +7,7 @@ export default class Header extends Component {
         <div className="header-wrapper">
           <div className="search-icon margin">
             <div className="color-gray margin" >
-              <i class="material-icons font-size-30">
+              <i className="material-icons font-size-30">
                 search
              </i>
             </div >

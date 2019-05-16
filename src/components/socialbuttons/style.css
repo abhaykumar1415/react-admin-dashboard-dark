@@ -1,0 +1,55 @@
+.small_icons{
+  width: 33px;
+  height: 33px;
+  border-radius: 17px;
+  margin-right: 10px;
+}
+
+.large_icons{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-right: 16px;
+}
+
+.reload_icons{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-right: 16px;
+}
+
+.social_buttons_wrapper{
+  background-color: #101420;
+  /* padding: 9px; */
+  width: 100%;
+}
+.color-white{
+  color: white;
+}
+
+.font-size-small{
+  font-size: small;
+}
+
+.padding{
+  padding: 15px 0px 0px 23px;
+}
+
+.social_images_wrapper{
+  padding: 22px;
+}
+
+.social_buttons_main_wrapper{
+  margin-right: 41px;
+  display: flex;
+}
+
+.social_buttons{
+  margin-right: 47px;
+  width: 50%;
+}
+
+.social_icons{
+  width: 50%;
+}
