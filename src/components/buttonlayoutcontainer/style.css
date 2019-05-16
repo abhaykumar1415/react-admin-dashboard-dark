@@ -2,7 +2,7 @@
   color: white;
 }
 
-.button-header{
+.header{
   font-size: xx-large;
   margin-bottom: 8px;
 }
@@ -11,7 +11,7 @@
   font-size: small;
 }
 
-.button-layout-container{
+.layout-container{
   padding-top: 15px;
 }
 
@@ -26,8 +26,9 @@
   margin-right: 234px;
 }
 
-.button-layout-container-wrapper{
+.layout-container-wrapper{
   padding: 40px 18px 44px 23px;
+  width: 86% !important;
 }
 
 .dropdown-btn-content{
@@ -69,7 +70,3 @@
   padding: 25px;
 }
 
-.social_buttons{
-  display: flex;
-  
-}

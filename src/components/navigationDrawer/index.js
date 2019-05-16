@@ -86,6 +86,18 @@ export default class NavigationDrawer extends Component {
             </div>
           </Link>
 
+          <Link to='/table' style={{ textDecoration: 'none' }}>
+            <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("table")}>
+              <i className="material-icons list-icon-padding">
+                pages
+               </i>
+              <div className="list-item-width">Table</div>
+              <i className="material-icons list-item-arrow">
+                chevron_right
+            </i>
+            </div>
+          </Link>
+
           <Link to='/icons' style={{ textDecoration: 'none' }}>
             <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("icons")}>
               <i className="material-icons list-icon-padding">

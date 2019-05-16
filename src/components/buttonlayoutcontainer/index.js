@@ -143,21 +143,14 @@ export default class ButtonLayoutContainer extends Component {
           dark_bg_color: '#0760C4'
         }
       ],
-      social_buttons: [
-        {
-          title: 'Social Buttons'
-        },
-        {
-          title: 'Icons'
-        }
-      ]
+
     }
   }
   render() {
     return (
-      <div className="button-layout-container-wrapper">
-        <div className="button-layout-container">
-          <div className="button-header color-white">
+      <div className="layout-container-wrapper">
+        <div className="layout-container">
+          <div className="header color-white">
             Buttons
           </div>
           <div className="font-size-small color-white">
@@ -272,17 +265,8 @@ export default class ButtonLayoutContainer extends Component {
           </div>
         </div>
         <div>
-          <div className="social_buttons">
-            {
-              this.state.social_buttons.map((item, index) => {
-                return (
-                  <SocialButtons
-                    title={item.title}
-                  />
-                )
-              })
-            }
-
+          <div >
+            <SocialButtons />
           </div>
         </div>
       </div>
