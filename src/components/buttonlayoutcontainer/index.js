@@ -5,7 +5,9 @@ import Dropdown from '../dropdown';
 import ButtonGroup from '../button-group';
 import MultipleButton from '../multiple_button';
 import VerticalGroup from '../verticalgroup';
-import SocialButtons from '../socialbuttons';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+// import SocialButtons from '../socialbuttons';
 export default class ButtonLayoutContainer extends Component {
   constructor(props) {
     super(props);
@@ -28,7 +30,7 @@ export default class ButtonLayoutContainer extends Component {
         [
           {
             title: 'Primary',
-            color: '#6387C5'
+            color: '#005FEC'
           },
           {
             title: 'white',
@@ -143,18 +145,26 @@ export default class ButtonLayoutContainer extends Component {
           dark_bg_color: '#0760C4'
         }
       ],
-
+      anchorEl: null,
     }
   }
+
+  handelClick = event => {
+    this.setState({ anchorEl: event.currentTarget });
+    console.log("helo");
+  };
+
+  handleCloseMenu = () => {
+    this.setState({ anchorEl: null });
+  };
+
   render() {
+    const { anchorEl } = this.state;
     return (
       <div className="layout-container-wrapper">
         <div className="layout-container">
           <div className="header color-white">
             Buttons
-          </div>
-          <div className="font-size-small color-white">
-            Home > Components > Buttons
           </div>
         </div>
         <div className="color-white button-style font-size-small font-weight margin-bottom">Button Colors & Styles</div>
@@ -207,6 +217,8 @@ export default class ButtonLayoutContainer extends Component {
                     key={index}
                     title={this.state.dropodown_btn_title}
                     btn_color={item.btn_color}
+                    handelClick={this.handelClick}
+                    handleCloseMenu={this.handleCloseMenu}
                   />
                 )
               })
@@ -221,7 +233,7 @@ export default class ButtonLayoutContainer extends Component {
               {
                 this.state.button_group_data.map((item, index) => {
                   return (
-                    <ButtonGroup
+                    <ButtonGroup key={index}
                       title={item.title}
                       left_bg_color={item.left_bg_color}
                       med_right_color={item.med_right_color}
@@ -240,7 +252,7 @@ export default class ButtonLayoutContainer extends Component {
             {
               this.state.multiple_buttons.map((item, index) => {
                 return (
-                  <MultipleButton
+                  <MultipleButton key={index}
                     bg_color={item.bg_color}
                     dark_bg_color={item.dark_bg_color}
                   />
@@ -255,7 +267,7 @@ export default class ButtonLayoutContainer extends Component {
             {
               this.state.multiple_buttons.map((item, index) => {
                 return (
-                  <VerticalGroup
+                  <VerticalGroup key={index}
                     bg_color={item.bg_color}
                     dark_bg_color={item.dark_bg_color}
                   />
@@ -264,11 +276,26 @@ export default class ButtonLayoutContainer extends Component {
             }
           </div>
         </div>
-        <div>
+
+        <Menu
+          id="simple-menu"
+          anchorEl={anchorEl}
+          open={Boolean(anchorEl)}
+          onClose={this.handleCloseMenu}
+        >
+          <MenuItem onClick={this.handleCloseMenu}>New Post</MenuItem>
+          <MenuItem onClick={this.handleCloseMenu}>Task</MenuItem>
+          <MenuItem onClick={this.handleCloseMenu}>Setting</MenuItem>
+          <MenuItem onClick={this.handleCloseMenu}>Help</MenuItem>
+          <MenuItem onClick={this.handleCloseMenu}>Log Out</MenuItem>
+
+        </Menu>
+
+        {/* <div>
           <div >
             <SocialButtons />
           </div>
-        </div>
+        </div> */}
       </div>
     )
   }

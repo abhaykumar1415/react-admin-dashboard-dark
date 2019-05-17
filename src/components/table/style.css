@@ -3,7 +3,7 @@
 }
 
 .layout-container-wrapper{
-  padding: 40px 18px 44px 23px;
+  /* padding: 40px 18px 44px 23px; */
 }
 
 .header{
@@ -14,10 +14,7 @@
 .font-size-small{
   font-size: small;
 }
-.input_search_wrapper{
-  display: flex;
-  justify-content: space-between;
-}
+
 
 .search_bar{
   display: flex;
