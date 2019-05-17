@@ -8,12 +8,16 @@ export default class NavigationDrawer extends Component {
   constructor() {
     super();
     this.state = {
-      form_submenu: false
+      form_submenu: false,
+      pages_submenu:false
     }
   }
   updateActiveMenu = (menu) => {
     if (menu === 'forms') {
-      this.setState({ form_submenu: !this.state.form_submenu })
+      this.setState({ form_submenu: !this.state.form_submenu });
+    }
+   if(menu==='pages'){
+      this.setState({ pages_submenu: !this.state.pages_submenu });
     }
     this.props.updateActiveMenu(menu);
 
@@ -72,36 +76,61 @@ export default class NavigationDrawer extends Component {
             </div>
           </Link>
 
-          <Link to='/pages' style={{ textDecoration: 'none' }}>
+          {/* <Link to='/pages' style={{ textDecoration: 'none' }}> */}
             <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("pages")}>
               <i class="material-icons list-icon-padding">
                 pages
-            </i>
-              <div className="list-item-width">Pages</div>
-              <i class="material-icons list-item-arrow">
-                chevron_right
-            </i>
-            </div>
-          </Link>
-
-          <Link to='/forms' style={{ textDecoration: 'none' }}>
-            <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("forms")}>
-              <i class="material-icons list-icon-padding">
-                file_copy
               </i>
-              <div className="list-item-width">Forms</div>
-              {
-                this.state.form_submenu ?
-                  <i class="material-icons list-item-arrow">
+               <div className="list-item-width">pages</div>
+               {
+                 this.state.pages_submenu ?
+                    <i class="material-icons list-item-arrow">
                     expand_more
-                  </i>
-                  :
-                  <i class="material-icons list-item-arrow">
+                    </i>
+                    :
+                    <i class="material-icons list-item-arrow">
                     chevron_right
-                  </i>
-              }
+                    </i>
+               }
             </div>
-          </Link>
+          {/* </Link> */}
+
+          {
+            this.state.pages_submenu ?
+              <div className="subitems">
+                {
+                  this.props.subpage.map((item, index) => {
+                    return (
+                      <div>
+                        <Link to={'/pages/' + index} style={{ textDecoration: 'none' }}>
+                          <div key={index} className="list-subitem font-clr-white">{item.title}</div>
+                        </Link>
+                      </div>
+                    )
+                  })
+                }
+              </div>
+              : null
+          }
+
+          {/* <Link to='/forms' style={{ textDecoration: 'none' }}> */}
+          <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("forms")}>
+            <i class="material-icons list-icon-padding">
+              file_copy
+              </i>
+            <div className="list-item-width">Forms</div>
+            {
+              this.state.form_submenu ?
+                <i class="material-icons list-item-arrow">
+                  expand_more
+                  </i>
+                :
+                <i class="material-icons list-item-arrow">
+                  chevron_right
+                  </i>
+            }
+          </div>
+          {/* </Link> */}
 
           {
             this.state.form_submenu ?
@@ -110,7 +139,7 @@ export default class NavigationDrawer extends Component {
                   this.props.subform.map((item, index) => {
                     return (
                       <div>
-                        <Link to={'/form/' + index} style={{ textDecoration: 'none' }}>
+                        <Link to={'/forms/' + index} style={{ textDecoration: 'none' }}>
                           <div key={index} className="list-subitem font-clr-white">{item.title}</div>
                         </Link>
                       </div>

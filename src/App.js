@@ -8,7 +8,7 @@ import Form from './components/forms';
 import Apps from './components/apps';
 import Calender from './components/calender';
 import ButtonLayoutContainer from './components/buttonlayoutcontainer';
-import Pages from './components/pages';
+import Listing from './components/listing';
 import Icons from './components/icons';
 import FormLayout from './components/formlayout';
 
@@ -40,7 +40,45 @@ export default class App extends Component {
         {
           title: 'Form Controls'
         }
-      ]
+      ],
+      pages_submenu: [
+        {
+          title: 'Listing'
+        }
+      ],
+      product_listing: {
+        title: 'Listing',
+        three_column_listing: {
+          title: '3 column listing',
+          column_one: {
+            title: '3 column listing',
+            image: require('./images/download (1).jpeg'),
+            product_name: 'Product Name',
+            discription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            prize: 'Rs. 600'
+          },
+          column_two: {
+            title: '3 column listing',
+            image: require('./images/download (2).jpeg'),
+            product_name: 'Product Name',
+            discription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            prize: 'Rs. 600'
+          },
+          column_three: {
+            title: '3 column listing',
+            image: require('./images/download (3).jpeg'),
+            product_name: 'Product Name',
+            discription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            prize: 'Rs. 600'
+          }
+        },
+        two_column_listing: {
+
+        },
+        single_column_listing: {
+
+        }
+      }
     }
   }
 
@@ -75,6 +113,7 @@ export default class App extends Component {
               active_menu_item={this.state.active_menu_item}
               updateActiveMenu={this.updateActiveMenu}
               subform={this.state.form_types}
+              subpage={this.state.pages_submenu}
             />
 
             <Switch>
@@ -99,39 +138,17 @@ export default class App extends Component {
                 render={props => (<ButtonLayoutContainer />)}
               />
 
-              <Route path="/pages"
-                render={props => (<Pages />)}
+              <Route path="/pages/0"
+                render={props => (<Listing product_listing={this.state.product_listing} />)}
               />
 
-              <Route path="/forms"
-                render={props => (<Form />)}
-              />
-
-              {/* {
-                this.state.form_types.map((item, id) => {
-                  return (
-                    <Route path="/forms/:id"
-                      render={props => (id === 0 ? <FormLayout /> : null)}
-                    />
-                  )
-                })
-              } */}
-
-              <Route path="/form/0"
+              <Route path="/forms/0"
                 render={props => (<FormLayout />)}
               />
 
               <Route path="/icons"
                 render={props => (<Icons />)}
               />
-
-              {/* <Route path="/location"
-                render={props => (<Location />)}
-              />
-
-              <Route path="/mobileview"
-                render={props => (<MobileView />)}
-              /> */}
 
             </Switch>
 
@@ -141,3 +158,15 @@ export default class App extends Component {
     )
   }
 }
+
+
+
+/* {
+  this.state.form_types.map((item, id) => {
+    return (
+      <Route path="/forms/:id"
+        render={props => (id === 0 ? <FormLayout /> : null)}
+      />
+    )
+  })
+} */

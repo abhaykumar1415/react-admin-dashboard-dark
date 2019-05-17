@@ -2,6 +2,7 @@
   background-color: #0E1322 ;
   height: 500px;
   width:40%;
+  border-radius: 8px;
 }
 
 .form-header{
@@ -10,6 +11,7 @@
   padding:10px;
   text-align: center;
   background-color: #070B17;
+  border-radius: 8px 8px 0px 0px;
 }
 
 .form-content{
