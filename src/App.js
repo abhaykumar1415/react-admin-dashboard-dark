@@ -51,21 +51,18 @@ export default class App extends Component {
         three_column_listing: {
           title: '3 column listing',
           column_one: {
-            title: '3 column listing',
             image: require('./images/download (1).jpeg'),
             product_name: 'Product Name',
             discription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             prize: 'Rs. 600'
           },
           column_two: {
-            title: '3 column listing',
             image: require('./images/download (2).jpeg'),
             product_name: 'Product Name',
             discription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             prize: 'Rs. 600'
           },
           column_three: {
-            title: '3 column listing',
             image: require('./images/download (3).jpeg'),
             product_name: 'Product Name',
             discription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -73,10 +70,34 @@ export default class App extends Component {
           }
         },
         two_column_listing: {
-
+          title: "Two column listing",
+          column_one: {
+            image: require('./images/download(4).jpeg'),
+            product_name: 'Product Name',
+            discription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            prize: 'Rs. 600'
+          },
+          column_two: {
+            image: require('./images/download(6).jpeg'),
+            product_name: 'Product Name',
+            discription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            prize: 'Rs. 600'
+          }
         },
         single_column_listing: {
-
+          title: "Single column listing",
+          column_one: {
+            image: require('./images/download(7).jpeg'),
+            product_name: 'Product Name',
+            discription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            prize: 'Rs. 600'
+          },
+          column_two: {
+            image: require('./images/download(8).jpeg'),
+            product_name: 'Product Name',
+            discription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            prize: 'Rs. 600'
+          }
         }
       }
     }
