@@ -1,0 +1,34 @@
+.layout-container{
+  padding-top: 15px;
+}
+
+.layout-container-wrapper{
+  /* padding: 40px 18px 44px 23px; */
+}
+
+.header{
+  font-size: xx-large;
+  margin-bottom: 8px;
+}
+
+.font-size-small{
+  font-size: small;
+}
+
+
+.search_bar{
+  display: flex;
+  background-color:#FFFFFF; 
+}
+
+.type_search{
+  color: gray;
+  border: 0;
+  font-size: 12px;
+  background-color:#FFFFFF; 
+}
+
+.font-size-20{
+  font-size: 20px;
+}
+

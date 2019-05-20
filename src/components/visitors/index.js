@@ -6,7 +6,7 @@ export default class Visitor extends Component {
       <div className="visitors">
         <div className="visitor-content">
           <div className="visitor-icon" style={{ backgroundColor: this.props.color }}>
-            <i class="material-icons eye-icon">
+            <i className="material-icons eye-icon">
               remove_red_eye
             </i>
           </div>

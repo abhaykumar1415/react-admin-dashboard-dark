@@ -73,44 +73,47 @@ export default class Listing extends Component {
 
         </div>
 
-        <div className="two-column-listing display color-white">
-          <div className="listing-column display">
-            <img src={this.props.product_listing.two_column_listing.column_one.image} className="images" />
-            <div>
-              <div>{this.props.product_listing.two_column_listing.column_one.product_name}</div>
-              <div>{this.props.product_listing.two_column_listing.column_one.discription}</div>
-              <div>{this.props.product_listing.two_column_listing.column_one.prize}</div>
+        <div className="two-column-listing color-white">
+          <h3 className="color-white">{this.props.product_listing.two_column_listing.title}</h3>
+          <div className="display">
+            <div className="listing-column display">
+              <img src={this.props.product_listing.two_column_listing.column_one.image} className="images" />
               <div>
-                <StarRatingComponent className="color-white"
-                  name="rate1"
-                  starCount={5}
-                  value={this.state.rating}
-                  onStarClick={this.onStarClick.bind(this)}
-                />
+                <div>{this.props.product_listing.two_column_listing.column_one.product_name}</div>
+                <div>{this.props.product_listing.two_column_listing.column_one.discription}</div>
+                <div>{this.props.product_listing.two_column_listing.column_one.prize}</div>
+                <div>
+                  <StarRatingComponent className="color-white"
+                    name="rate1"
+                    starCount={5}
+                    value={this.state.rating}
+                    onStarClick={this.onStarClick.bind(this)}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="listing-column display color-white">
+              <img src={this.props.product_listing.two_column_listing.column_two.image} className="images" />
+              <div>
+                <div>{this.props.product_listing.two_column_listing.column_two.product_name}</div>
+                <div>{this.props.product_listing.two_column_listing.column_two.discription}</div>
+                <div>{this.props.product_listing.two_column_listing.column_two.prize}</div>
+                <div>
+                  <StarRatingComponent className="color-white"
+                    name="rate1"
+                    starCount={5}
+                    value={this.state.rating}
+                    onStarClick={this.onStarClick.bind(this)}
+                  />
+                </div>
               </div>
             </div>
           </div>
-
-          <div className="listing-column display color-white">
-            <img src={this.props.product_listing.two_column_listing.column_two.image} className="images" />
-            <div>
-              <div>{this.props.product_listing.two_column_listing.column_two.product_name}</div>
-              <div>{this.props.product_listing.two_column_listing.column_two.discription}</div>
-              <div>{this.props.product_listing.two_column_listing.column_two.prize}</div>
-              <div>
-                <StarRatingComponent className="color-white"
-                  name="rate1"
-                  starCount={5}
-                  value={this.state.rating}
-                  onStarClick={this.onStarClick.bind(this)}
-                />
-              </div>
-            </div>
-          </div>
-
         </div>
 
         <div className="single-column-listing listing-column color-white">
+          <h3 className="color-white">{this.props.product_listing.single_column_listing.title}</h3>
           <div className="listing-column display">
             <img src={this.props.product_listing.single_column_listing.column_one.image} className="images" />
             <div>

@@ -1,0 +1,12 @@
+.vertical_group_wrapper{
+  display: flex;
+  flex-direction: column;
+  margin-right: 41px;
+   
+}
+
+.vertical_grp_style{
+  padding: 7px 32px 7px 32px;
+  font-size: 12px;
+  font-weight: 400;
+}

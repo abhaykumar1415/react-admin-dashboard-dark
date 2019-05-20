@@ -11,6 +11,7 @@ import ButtonLayoutContainer from './components/buttonlayoutcontainer';
 import Listing from './components/listing';
 import Icons from './components/icons';
 import FormLayout from './components/formlayout';
+import Table from './components/table';
 
 export default class App extends Component {
 
@@ -165,6 +166,10 @@ export default class App extends Component {
 
               <Route path="/forms/0"
                 render={props => (<FormLayout />)}
+              />
+
+              <Route path="/table"
+                render={props => (<Table />)}
               />
 
               <Route path="/icons"

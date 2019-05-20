@@ -1,5 +1,5 @@
 .content{
-  margin:38px 45px;
+  margin:60px 45px;
 }
 .dashboard-header{
   color: white;
@@ -97,6 +97,7 @@
 .email-statistics{
   display: flex;
   width: 100%;
+  display: flex;
 }
 
 .task-activity{
@@ -105,7 +106,7 @@
 }
 
 .main-content-wrapper{
-  width:86% !important; 
+  width:76% !important; 
 }
 
 /* .content-four-tasks{

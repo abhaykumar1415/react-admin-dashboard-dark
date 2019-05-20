@@ -1,0 +1,11 @@
+.dropdown-wrapper{
+  display: flex;
+  margin-right: 33px;
+  padding: 7px;
+}
+
+.action-button{
+  border: 1px solid transparent;
+  font-size: 12px;
+  font-weight: 500;
+}

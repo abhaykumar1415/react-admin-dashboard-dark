@@ -2,7 +2,7 @@
   color: white;
 }
 
-.button-header{
+.header{
   font-size: xx-large;
   margin-bottom: 8px;
 }
@@ -11,6 +11,62 @@
   font-size: small;
 }
 
-.button-layout-container{
+.layout-container{
   padding-top: 15px;
 }
+
+.button_with_sizes{
+  display: flex;
+  background-color: #101420;
+  margin-bottom: 2px;
+  padding: 22px 26px;
+}
+
+.margin-right{
+  margin-right: 234px;
+}
+
+.layout-container-wrapper{
+  padding: 40px 18px 44px 23px;
+  width: 86% !important;
+}
+
+.dropdown-btn-content{
+  background-color: #101420;
+  display: flex;
+  padding: 29px 0px 32px 25px;
+}
+
+.square_rounded_button_group_wrapper{
+  background-color: #101420; 
+}
+
+.button-style{
+  margin-top: 50px;
+}
+
+.padding{
+  padding: 15px 0px 0px 23px;
+}
+
+.square_rounded_button_content{
+  display: flex;
+  flex-flow: wrap;
+  padding: 10px 0px 16px 24px;
+  margin-bottom: 2px;
+}
+
+.background_black{
+  background-color: #101420;
+  margin-bottom: 2px;
+}
+
+.multiple_buttons{
+  display: flex;
+}
+
+.vertical_group{
+  display: flex;
+  padding: 25px;
+}
+
