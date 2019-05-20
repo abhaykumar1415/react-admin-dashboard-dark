@@ -20,7 +20,8 @@ export default class Button extends Component {
         color: 'white',
         fontSize: 'small',
         padding: '11px 32px',
-        fontWeight: '500'
+        fontWeight: '500',
+        border: '1px solid transperant'
       };
         break;
       case "Rounded-Outline": btnStyle = {
