@@ -10,19 +10,17 @@ export default class TableContent extends Component {
     super(props);
     this.state = {
       number: 0,
-      open: false,
+      openSnackbar: false,
       title: '',
       searchText: '',
       NameList: this.props.data.content,
-      
     }
   }
 
-  handelTabel = async (e) => {
+  handleTabel = async (e) => {
     let a = e.target.value;
     if (a > this.props.data.content.length) {
-      this.setState({ open: true });
-      this.setState({ number: 0 });
+      this.setState({ openSnackbar: true });
     }
     await this.setState({ number: a }, () => {
       console.log("", this.state.number)
@@ -30,20 +28,18 @@ export default class TableContent extends Component {
   }
 
   handleClose = () => {
-    if (this.props.data.content.length > this.state.number)
-      this.setState({ open: false });
+    if (this.props.data.content.length <this.state.number)
+      this.setState({ openSnackbar: false });
   };
-  handelInput = async (e) => {
+  handleInput = async (e) => {
     let name = e.target.value;
     await
       this.setState({ title: name })
     console.log("title", this.state.title);
   }
 
- 
-
   render() {
-  
+
     return (
       <div>
         <div className="color-white button-style font-size-small font-weight margin-bottom">
@@ -51,7 +47,7 @@ export default class TableContent extends Component {
         </div>
         <div className="input_search_wrapper">
           <div>
-            <input type="number" name="quantity" style={{ width: '7em' }} value={this.state.number} onChange={this.handelTabel}></input>
+            <input type="number" name="quantity" style={{ width: '7em' }} value={this.state.number} onChange={this.handleTabel}></input>
           </div>
           <div className="search_bar">
 
@@ -62,7 +58,7 @@ export default class TableContent extends Component {
               type="search"
               placeholder="Search..."
               size="30"
-              onChange={this.handelInput}
+              onChange={this.handleInput}
             />
           </div>
         </div>
@@ -104,16 +100,16 @@ export default class TableContent extends Component {
           }
 
         </div>
-
         <div className="color-white entries">
           Showing 1-10 of 50 entries
         </div>
+        {console.log("snackbar in render", this.state.openSnackbar)}
         <Snackbar
           anchorOrigin={{
             vertical: 'top',
             horizontal: 'left',
           }}
-          open={this.state.open}
+          openSnackbar={this.state.openSnackbar}
           autoHideDuration={6000}
           onClose={this.handleClose}
           ContentProps={{
@@ -128,7 +124,6 @@ export default class TableContent extends Component {
               key="close"
               aria-label="Close"
               color="inherit"
-              // className={classes.close}
               onClick={this.handleClose}
             >
               <CloseIcon />
@@ -136,7 +131,7 @@ export default class TableContent extends Component {
           ]}
         />
 
-       
+
       </div >
     )
   }
