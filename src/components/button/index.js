@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './style.css';
 export default class Button extends Component {
-
   render() {
     let btnStyle;
     console.log("props", this.props.btn_colors ? this.props.btn_colors : null);

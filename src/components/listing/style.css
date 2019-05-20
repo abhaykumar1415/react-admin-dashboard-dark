@@ -1,0 +1,40 @@
+.listing-wrapper{
+  width: 86% !important;
+  padding: 30px 22px;
+}
+
+.layout-header{
+  font-size: 28px;
+}
+
+.three-column-listing{
+  font-size: 12px;
+  font-family:  sans-serif;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.images{
+  width: 100%;
+}
+
+.display{
+  display: flex;
+}
+
+.listing-data{
+  
+}
+
+.listing-column{
+
+}
+
+.listing-column-for-two{
+
+}
+.two-column-listing{
+  
+}

@@ -1,0 +1,17 @@
+.horizontal-form-wrapper{
+  background-color: #0E1322;
+  width: 90%;
+  margin-left: 60px;
+  margin-bottom: 50px;
+}
+
+.verification{
+  display: flex;
+  justify-content: space-between;
+  color: #545A68;
+  font-size: 12px;
+}
+
+.forgot-password{
+  color:blue;
+}
