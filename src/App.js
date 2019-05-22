@@ -54,19 +54,19 @@ export default class App extends Component {
           column_one: {
             image: require('./images/download (1).jpeg'),
             product_name: 'Product Name',
-            discription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            description: 'Lorem ipsum dolor sit',
             prize: 'Rs. 600'
           },
           column_two: {
             image: require('./images/download (2).jpeg'),
             product_name: 'Product Name',
-            discription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            description: 'Lorem ipsum dolor sit',
             prize: 'Rs. 600'
           },
           column_three: {
             image: require('./images/download (3).jpeg'),
             product_name: 'Product Name',
-            discription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            description: 'Lorem ipsum dolor sit',
             prize: 'Rs. 600'
           }
         },
@@ -75,28 +75,40 @@ export default class App extends Component {
           column_one: {
             image: require('./images/download(4).jpeg'),
             product_name: 'Product Name',
-            discription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            description: 'Lorem ipsum dolor sit',
             prize: 'Rs. 600'
           },
           column_two: {
             image: require('./images/download(6).jpeg'),
             product_name: 'Product Name',
-            discription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            description: 'Lorem ipsum dolor sit',
+            prize: 'Rs. 600'
+          },
+          column_three: {
+            image: require('./images/home.jpg'),
+            product_name: 'Product Name',
+            description: 'Lorem ipsum dolor sit',
+            prize: 'Rs. 600'
+          },
+          column_four: {
+            image: require('./images/Events.jpg'),
+            product_name: 'Product Name',
+            description: 'Lorem ipsum dolor sit',
             prize: 'Rs. 600'
           }
         },
         single_column_listing: {
-          title: "Single column listing",
+          title: "Single  listing",
           column_one: {
             image: require('./images/download(7).jpeg'),
             product_name: 'Product Name',
-            discription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            prize: 'Rs. 600'
+            description: 'Lorem ipsum dolor sit',
+            prize: 'Rs.4.85 Crors'
           },
           column_two: {
             image: require('./images/download(8).jpeg'),
             product_name: 'Product Name',
-            discription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            description: 'Lorem ipsum dolor sit',
             prize: 'Rs. 600'
           }
         }

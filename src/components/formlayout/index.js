@@ -61,6 +61,9 @@ export default class FormLayout extends Component {
   render() {
     return (
       <div className="forms">
+        <div className="header color-white layout-container">
+          Data Table
+          </div>
         <div className="basic-iconic-forms">
           <BasicForm
             basic_form_data={this.state.basic_form_data}

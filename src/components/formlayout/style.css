@@ -1,6 +1,6 @@
 .basic-iconic-forms{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin: 25px 0px 50px 0px;
 }
 

@@ -151,7 +151,7 @@ export default class ButtonLayoutContainer extends Component {
 
   handelClick = event => {
     this.setState({ anchorEl: event.currentTarget });
-    console.log("helo");
+    console.log("hello");
   };
 
   handleCloseMenu = () => {
@@ -180,14 +180,13 @@ export default class ButtonLayoutContainer extends Component {
             )
           })
         }
-
         <div>
           <div className="color-white button-style font-size-small font-weight margin-bottom">Button Sizes</div>
           <div className="color-white button_with_sizes">
-            <div className="button-size-header font-size-small font-weight margin-right ">Extra Small</div>
-            <div className="button-size-header font-size-small font-weight margin-right">Small</div>
-            <div className="button-size-header font-size-small font-weight margin-right">Default</div>
-            <div className="button-size-header font-size-small font-weight margin-right">Large</div>
+            <div className="button-size-header font-size-small font-weight  width-25 ">Extra Small</div>
+            <div className="button-size-header font-size-small font-weight  width-25">Small</div>
+            <div className="button-size-header font-size-small font-weight  width-25">Default</div>
+            <div className="button-size-header font-size-small font-weight  width-25">Large</div>
           </div>
           <ButtonWrapper
             button_size_data={this.state.button_sizes}

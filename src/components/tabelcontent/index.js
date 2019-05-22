@@ -10,7 +10,7 @@ export default class TableContent extends Component {
     super(props);
     this.state = {
       number: 0,
-      openSnackbar: false,
+      open: false,
       title: '',
       searchText: '',
       NameList: this.props.data.content,
@@ -20,7 +20,9 @@ export default class TableContent extends Component {
   handleTabel = async (e) => {
     let a = e.target.value;
     if (a > this.props.data.content.length) {
-      this.setState({ openSnackbar: true });
+      await this.setState({ open: true }, () => {
+        console.log("snackbar in fun", this.state.open)
+      });
     }
     await this.setState({ number: a }, () => {
       console.log("", this.state.number)
@@ -28,9 +30,10 @@ export default class TableContent extends Component {
   }
 
   handleClose = () => {
-    if (this.props.data.content.length <this.state.number)
-      this.setState({ openSnackbar: false });
+    if (this.props.data.content.length < this.state.number)
+      this.setState({ open: false });
   };
+  
   handleInput = async (e) => {
     let name = e.target.value;
     await
@@ -101,15 +104,15 @@ export default class TableContent extends Component {
 
         </div>
         <div className="color-white entries">
-          Showing 1-10 of 50 entries
+          Showing 1-{this.props.data.content.length} of 50 entries
         </div>
-        {console.log("snackbar in render", this.state.openSnackbar)}
+        {console.log("snackbar in render", this.state.open)}
         <Snackbar
           anchorOrigin={{
             vertical: 'top',
             horizontal: 'left',
           }}
-          openSnackbar={this.state.openSnackbar}
+          open={this.state.open}
           autoHideDuration={6000}
           onClose={this.handleClose}
           ContentProps={{
