@@ -1,0 +1,16 @@
+.form-wrapper{
+  background-color: black;
+  height: 200px;
+  margin: 50px;
+  color:white;
+  font-size:10px;
+}
+
+.username-icon-clr{
+  color: #545A68;
+  border-bottom: 1px solid #545A68;
+}
+
+.iconic-text-fields{
+  display:flex;
+}

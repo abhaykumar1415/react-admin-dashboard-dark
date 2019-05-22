@@ -8,8 +8,9 @@ import Form from './components/forms';
 import Apps from './components/apps';
 import Calender from './components/calender';
 import ButtonLayoutContainer from './components/buttonlayoutcontainer';
-import Pages from './components/pages';
+import Listing from './components/listing';
 import Icons from './components/icons';
+import FormLayout from './components/formlayout';
 import Table from './components/table';
 
 export default class App extends Component {
@@ -29,6 +30,88 @@ export default class App extends Component {
       userProfile: {
         name: "Leonid Aristov",
         role: "Project Manager"
+      },
+      form_types: [
+        {
+          title: 'Form Layout'
+        },
+        {
+          title: 'Form Inputs'
+        },
+        {
+          title: 'Form Controls'
+        }
+      ],
+      pages_submenu: [
+        {
+          title: 'Listing'
+        }
+      ],
+      product_listing: {
+        title: 'Listing',
+        three_column_listing: {
+          title: '3 column listing',
+          column_one: {
+            image: require('./images/download (1).jpeg'),
+            product_name: 'Product Name',
+            description: 'Lorem ipsum dolor sit',
+            prize: 'Rs. 600'
+          },
+          column_two: {
+            image: require('./images/download (2).jpeg'),
+            product_name: 'Product Name',
+            description: 'Lorem ipsum dolor sit',
+            prize: 'Rs. 600'
+          },
+          column_three: {
+            image: require('./images/download (3).jpeg'),
+            product_name: 'Product Name',
+            description: 'Lorem ipsum dolor sit',
+            prize: 'Rs. 600'
+          }
+        },
+        two_column_listing: {
+          title: "Two column listing",
+          column_one: {
+            image: require('./images/download(4).jpeg'),
+            product_name: 'Product Name',
+            description: 'Lorem ipsum dolor sit',
+            prize: 'Rs. 600'
+          },
+          column_two: {
+            image: require('./images/download(6).jpeg'),
+            product_name: 'Product Name',
+            description: 'Lorem ipsum dolor sit',
+            prize: 'Rs. 600'
+          },
+          column_three: {
+            image: require('./images/home.jpg'),
+            product_name: 'Product Name',
+            description: 'Lorem ipsum dolor sit',
+            prize: 'Rs. 600'
+          },
+          column_four: {
+            image: require('./images/Events.jpg'),
+            product_name: 'Product Name',
+            description: 'Lorem ipsum dolor sit',
+            prize: 'Rs. 600'
+          }
+        },
+        single_column_listing: {
+          title: "Single  listing",
+          column_one: {
+            image: require('./images/download(7).jpeg'),
+            product_name: 'Product Name',
+            description: 'Lorem ipsum dolor sit',
+            prize: 'Rs.4.85 Crors'
+          },
+          column_two: {
+            image: require('./images/download(8).jpeg'),
+            product_name: 'Product Name',
+            description: 'Lorem ipsum dolor sit',
+            prize: 'Rs. 600'
+          }
+        }
       }
     }
   }
@@ -48,22 +131,23 @@ export default class App extends Component {
   }
 
   render() {
-    console.log("active-menu :", this.state.active_menu_item);
     return (
       <div className="app">
-        <Header
-          isClicked={this.state.isClicked}
-          handelClick={this.handelClick}
-        />
-        {
-          this.state.isClicked === true ? <button className="logout-btn">Logout</button> : null
-        }
         <Router>
+          <Header
+            isClicked={this.state.isClicked}
+            handelClick={this.handelClick}
+          />
+          {
+            this.state.isClicked === true ? <button className="logout-btn">Logout</button> : null
+          }
           <div className="content-wrapper">
             <NavigationDrawer
               userdata={this.state.userProfile}
               active_menu_item={this.state.active_menu_item}
               updateActiveMenu={this.updateActiveMenu}
+              subform={this.state.form_types}
+              subpage={this.state.pages_submenu}
             />
 
             <Switch>
@@ -88,12 +172,12 @@ export default class App extends Component {
                 render={props => (<ButtonLayoutContainer />)}
               />
 
-              <Route path="/pages"
-                render={props => (<Pages />)}
+              <Route path="/pages/0"
+                render={props => (<Listing product_listing={this.state.product_listing} />)}
               />
 
-              <Route path="/forms"
-                render={props => (<Form />)}
+              <Route path="/forms/0"
+                render={props => (<FormLayout />)}
               />
 
               <Route path="/table"
@@ -104,15 +188,8 @@ export default class App extends Component {
                 render={props => (<Icons />)}
               />
 
-              {/* <Route path="/location"
-                render={props => (<Location />)}
-              />
-
-              <Route path="/mobileview"
-                render={props => (<MobileView />)}
-              /> */}
-
             </Switch>
+
           </div>
         </Router>
       </div>
@@ -122,21 +199,12 @@ export default class App extends Component {
 
 
 
-// render() {
-//   return (
-//     <div className="App" >
-//       <Header
-//         isClicked={this.state.isClicked}
-//         handelClick={this.handelClick}
-//       />
-//       <div className="content-navigation-wrapper">
-//         <NavigationDrawer />
-//         <Content />
-//       </div>
-//       {
-//         this.state.isClicked === true ? <button className="logout-btn">Logout</button> : null
-//       }
-//     </div>
-//   );
-// }
-// }
+/* {
+  this.state.form_types.map((item, id) => {
+    return (
+      <Route path="/forms/:id"
+        render={props => (id === 0 ? <FormLayout /> : null)}
+      />
+    )
+  })
+} */
