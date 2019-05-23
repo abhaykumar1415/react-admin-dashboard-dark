@@ -12,6 +12,7 @@ import Listing from './components/listing';
 import Icons from './components/icons';
 import FormLayout from './components/formlayout';
 import Table from './components/table';
+import CardLayoutContainer from './components/cardlayoutcontainer';
 
 export default class App extends Component {
 
@@ -31,7 +32,7 @@ export default class App extends Component {
         name: "Leonid Aristov",
         role: "Project Manager"
       },
-      form_types: [
+      form_submenu: [
         {
           title: 'Form Layout'
         },
@@ -45,6 +46,14 @@ export default class App extends Component {
       pages_submenu: [
         {
           title: 'Listing'
+        }
+      ],
+      components_submenu: [
+        {
+          title: 'Buttons'
+        },
+        {
+          title: 'Cards'
         }
       ],
       product_listing: {
@@ -146,8 +155,9 @@ export default class App extends Component {
               userdata={this.state.userProfile}
               active_menu_item={this.state.active_menu_item}
               updateActiveMenu={this.updateActiveMenu}
-              subform={this.state.form_types}
+              subform={this.state.form_submenu}
               subpage={this.state.pages_submenu}
+              subcomponent={this.state.components_submenu}
             />
 
             <Switch>
@@ -168,8 +178,12 @@ export default class App extends Component {
                 render={props => (<Calender />)}
               />
 
-              <Route path="/components"
+              <Route path="/components/0"
                 render={props => (<ButtonLayoutContainer />)}
+              />
+
+              <Route path="/components/1"
+                render={props => (<CardLayoutContainer />)}
               />
 
               <Route path="/pages/0"

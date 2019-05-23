@@ -9,7 +9,8 @@ export default class NavigationDrawer extends Component {
     super();
     this.state = {
       form_submenu: false,
-      pages_submenu: false
+      pages_submenu: false,
+      components_submenu: false
     }
   }
   updateActiveMenu = (menu) => {
@@ -18,6 +19,9 @@ export default class NavigationDrawer extends Component {
     }
     if (menu === 'pages') {
       this.setState({ pages_submenu: !this.state.pages_submenu });
+    }
+    if (menu === 'components') {
+      this.setState({ components_submenu: !this.state.components_submenu });
     }
     this.props.updateActiveMenu(menu);
 
@@ -52,29 +56,51 @@ export default class NavigationDrawer extends Component {
             </div>
           </Link>
 
-          <Link to='/calender' style={{ textDecoration: 'none' }}>
-            <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("calender")}>
-              <i className="material-icons list-icon-padding">
-                calendar_today
+          <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("calender")}>
+            <i className="material-icons list-icon-padding">
+              calendar_today
             </i>
-              <div className="list-item-width">Calender</div>
-              <i className="material-icons list-item-arrow">
-                chevron_right
-            </i>
-            </div>
-          </Link>
+            <div className="list-item-width">Calender</div>
+            {
+              this.state.components_submenu ?
+                <i class="material-icons list-item-arrow">
+                  expand_more
+                    </i>
+                :
+                <i class="material-icons list-item-arrow">
+                  chevron_right
+                    </i>
+            }
+          </div>
 
-          <Link to='/components' style={{ textDecoration: 'none' }}>
-            <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("components")}>
-              <i className="material-icons list-icon-padding">
-                satellite
+          <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("components")}>
+            <i className="material-icons list-icon-padding">
+              satellite
             </i>
-              <div className="list-item-width">Components</div>
-              <i className="material-icons list-item-arrow">
-                chevron_right
+            <div className="list-item-width">Components</div>
+            <i className="material-icons list-item-arrow">
+              chevron_right
             </i>
-            </div>
-          </Link>
+          </div>
+
+          {
+            this.state.components_submenu ?
+              <div className="subitems">
+                {
+                  this.props.subcomponent.map((item, index) => {
+                    return (
+                      <div>
+                        <Link to={'/components/' + index} style={{ textDecoration: 'none' }}>
+                          <div key={index} className="list-subitem font-clr-white">{item.title}</div>
+                        </Link>
+                      </div>
+                    )
+                  })
+                }
+              </div>
+              : null
+          }
+
 
           {/* <Link to='/pages' style={{ textDecoration: 'none' }}> */}
           <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("pages")}>
@@ -157,6 +183,18 @@ export default class NavigationDrawer extends Component {
                 wb_sunny
             </i>
               <div className="list-item-width">Icons</div>
+              <i className="material-icons list-item-arrow">
+                chevron_right
+            </i>
+            </div>
+          </Link>
+
+          <Link to='/table' style={{ textDecoration: 'none' }}>
+            <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("table")}>
+              <i className="material-icons list-icon-padding">
+                wb_sunny
+            </i>
+              <div className="list-item-width">Table</div>
               <i className="material-icons list-item-arrow">
                 chevron_right
             </i>

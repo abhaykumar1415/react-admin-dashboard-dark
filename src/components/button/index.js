@@ -3,14 +3,14 @@ import './style.css';
 export default class Button extends Component {
   render() {
     let btnStyle;
-    console.log("props", this.props.btn_colors ? this.props.btn_colors : null);
+    // console.log("props", this.props.btn_colors ? this.props.btn_colors : null);
     switch (this.props.buttonType) {
       case "Outline":
         btnStyle = {
           border: "1px solid" + this.props.color,
           color: this.props.color,
           fontSize: 'small',
-          padding: '11px 32px',
+          padding: this.props.padding ? this.props.padding : '11px 32px',
           fontWeight: '500'
         };
         break;
