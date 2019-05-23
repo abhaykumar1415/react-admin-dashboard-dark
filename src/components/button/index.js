@@ -49,7 +49,7 @@ export default class Button extends Component {
         padding: '7px 26px',
         fontWeight: '200',
         borderRadius: '3px',
-        marginRight: '197px'
+        marginRight: '163px'
       };
         break;
       case "small": btnStyle = {
@@ -71,7 +71,7 @@ export default class Button extends Component {
         padding: '9px 34px',
         fontWeight: '400',
         borderRadius: '3px',
-        marginRight: '124px'
+        marginRight: '133px'
       };
         break;
       case "large": btnStyle = {
@@ -88,7 +88,7 @@ export default class Button extends Component {
     }
 
     return (
-      <div className="button-content-wrapper">
+      <div className="button-content-wrapper ">
         <button style={btnStyle}>{this.props.title}</button>
       </div >
     )

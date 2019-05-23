@@ -5,11 +5,12 @@
 
 .column-form-wrapper{
   width:45%;
+  height: 500px;
 }
 
 .two-column-form{
-  margin-left: 60px;
-  width: 90%;
+  /* margin-left: 60px;
+  width: 90%; */
   background-color: #0E1322;
 }
 

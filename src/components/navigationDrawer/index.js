@@ -34,7 +34,7 @@ export default class NavigationDrawer extends Component {
 
           <Link to='/dashboard' style={{ textDecoration: 'none' }}>
             <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("dashboard")}>
-              <i class="material-icons list-icon-padding">
+              <i className="material-icons list-icon-padding">
                 dashboard
             </i>
               <div>DASHBOARD</div>
@@ -46,7 +46,7 @@ export default class NavigationDrawer extends Component {
 
           <Link to='/apps' style={{ textDecoration: 'none' }}>
             <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("apps")}>
-              <i class="material-icons list-icon-padding">
+              <i className="material-icons list-icon-padding">
                 apps
             </i>
               <div className="list-item-width">Apps</div>
@@ -110,11 +110,11 @@ export default class NavigationDrawer extends Component {
             <div className="list-item-width">pages</div>
             {
               this.state.pages_submenu ?
-                <i class="material-icons list-item-arrow">
+                <i className="material-icons list-item-arrow">
                   expand_more
                     </i>
                 :
-                <i class="material-icons list-item-arrow">
+                <i className="material-icons list-item-arrow">
                   chevron_right
                     </i>
             }
@@ -127,7 +127,7 @@ export default class NavigationDrawer extends Component {
                 {
                   this.props.subpage.map((item, index) => {
                     return (
-                      <div>
+                      <div key={index}>
                         <Link to={'/pages/' + index} style={{ textDecoration: 'none' }}>
                           <div key={index} className="list-subitem font-clr-white">{item.title}</div>
                         </Link>
@@ -141,17 +141,17 @@ export default class NavigationDrawer extends Component {
 
           {/* <Link to='/forms' style={{ textDecoration: 'none' }}> */}
           <div className="font-clr-white listitem" onClick={() => this.updateActiveMenu("forms")}>
-            <i class="material-icons list-icon-padding">
+            <i className="material-icons list-icon-padding">
               file_copy
               </i>
             <div className="list-item-width">Forms</div>
             {
               this.state.form_submenu ?
-                <i class="material-icons list-item-arrow">
+                <i className="material-icons list-item-arrow">
                   expand_more
                   </i>
                 :
-                <i class="material-icons list-item-arrow">
+                <i className="material-icons list-item-arrow">
                   chevron_right
                   </i>
             }
@@ -164,7 +164,7 @@ export default class NavigationDrawer extends Component {
                 {
                   this.props.subform.map((item, index) => {
                     return (
-                      <div>
+                      <div key={index}>
                         <Link to={'/forms/' + index} style={{ textDecoration: 'none' }}>
                           <div key={index} className="list-subitem font-clr-white">{item.title}</div>
                         </Link>
