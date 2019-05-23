@@ -71,24 +71,28 @@ export default class App extends Component {
           }
         },
         two_column_listing: {
-          title: "Two column listing",
+          title: "2 Column Listing",
           column_one: {
             image: require('./images/download(4).jpeg'),
             product_name: 'Product Name',
-            description: 'Lorem ipsum dolor sit',
+            description: 'Lorem ipsum dolor sit amet',
             prize: 'Rs. 600'
           },
           column_two: {
             image: require('./images/download(6).jpeg'),
-            product_name: 'Product Name',
-            description: 'Lorem ipsum dolor sit',
-            prize: 'Rs. 600'
+            product_name: 'Event Name',
+            description: 'Lorem ipsum',
+            place: 'Shanghai, China',
+            day: 'Mon,6 May 2018',
+            time: '7:00 PM'
           },
           column_three: {
             image: require('./images/home.jpg'),
             product_name: 'Product Name',
-            description: 'Lorem ipsum dolor sit',
-            prize: 'Rs. 600'
+            desc: 'Posted On',
+            description: 'Monaco,Europe',
+            day: '06 May 2018',
+            prize: 'Rs.4.85 Crors'
           },
           column_four: {
             image: require('./images/Events.jpg'),
@@ -100,13 +104,13 @@ export default class App extends Component {
         single_column_listing: {
           title: "Single  listing",
           column_one: {
-            image: require('./images/download(7).jpeg'),
+            image: require('./images/home.jpg'),
             product_name: 'Product Name',
             description: 'Lorem ipsum dolor sit',
             prize: 'Rs.4.85 Crors'
           },
           column_two: {
-            image: require('./images/download(8).jpeg'),
+            image: require('./images/download(10).jpeg'),
             product_name: 'Product Name',
             description: 'Lorem ipsum dolor sit',
             prize: 'Rs. 600'
