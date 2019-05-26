@@ -62,12 +62,10 @@ export default class CardLayoutContainer extends Component {
         },
         option: {
           scaleShowLables: false,
-          // labels: false
         }
       }
     }
   }
-
   chartRef = React.createRef();
   componentDidMount() {
     const myChartRef = this.chartRef.current.getContext('2d');

@@ -6,6 +6,7 @@ export default class StatisticsCard extends Component {
   render() {
     console.log("clr");
     return (
+
       <div className="chart-wrapper" >
         <canvas
           ref={this.props.chartRef}
@@ -24,7 +25,6 @@ export default class StatisticsCard extends Component {
             })}
           </div>
         </div>
-
       </div>
     )
   }

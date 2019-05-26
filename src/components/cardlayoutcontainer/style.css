@@ -65,6 +65,7 @@
   color: white;
 }
 
-/* .img_div{
-
-} */
+.bar-graph{
+  height: 300px;
+  width:100%
+}
