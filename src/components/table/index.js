@@ -94,7 +94,6 @@ export default class Table extends Component {
     this.setState({ reversList: !this.state.reversList });
   }
 
-
   render() {
 
     return (
@@ -113,10 +112,6 @@ export default class Table extends Component {
               data={this.state.data_table_without_pagination}
             />
         }
-
-
-
-
         <Snackbar
           anchorOrigin={{
             vertical: 'top',
