@@ -1,0 +1,70 @@
+.card-header{
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 2px solid #262D40;
+}
+
+.user-profiles{
+  display: flex;
+  color: white;
+  font-size: 13px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.todos{
+  width:32%;
+  background-color: #0E1322;
+  height: 702px;
+  border-radius: 4px;
+ }
+
+.notes-card-column{
+  background-color: #0E1322;
+  width: 32%;
+  height: 702px;
+  border-radius: 4px;
+}
+
+.statistics-card-wrapper{
+  background-color: #0E1322;
+  width: 32%;
+  height: 702px;
+  border-radius: 4px;
+}
+.card_columns{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.add-task{
+  display: flex;
+  align-items: center;
+  width: 40%;
+  justify-content: space-evenly;
+}
+
+/* .profile-img-div{
+  
+} */
+
+.todo_image{
+  width: 18%;
+  border-radius: 45px;
+  height: 60px;
+  padding: 7px;
+}
+
+.todo_images{
+  display: flex;
+}
+
+.clr_white{
+  color: white;
+}
+
+/* .img_div{
+
+} */

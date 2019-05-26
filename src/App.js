@@ -12,13 +12,14 @@ import Listing from './components/listing';
 import Icons from './components/icons';
 import FormLayout from './components/formlayout';
 import Table from './components/table';
+import CardLayoutContainer from './components/cardlayoutcontainer';
 
 export default class App extends Component {
 
   constructor() {
     super();
     this.state = {
-      isClicked: false,
+
       active_menu_item: 'dashboard',
       clr_arr: [],
       visitor_data: {
@@ -31,7 +32,7 @@ export default class App extends Component {
         name: "Leonid Aristov",
         role: "Project Manager"
       },
-      form_types: [
+      form_submenu: [
         {
           title: 'Form Layout'
         },
@@ -47,83 +48,18 @@ export default class App extends Component {
           title: 'Listing'
         }
       ],
-      product_listing: {
-        title: 'Listing',
-        three_column_listing: {
-          title: '3 column listing',
-          column_one: {
-            image: require('./images/download (1).jpeg'),
-            product_name: 'Product Name',
-            description: 'Lorem ipsum dolor sit',
-            prize: 'Rs. 600'
-          },
-          column_two: {
-            image: require('./images/download (2).jpeg'),
-            product_name: 'Product Name',
-            description: 'Lorem ipsum dolor sit',
-            prize: 'Rs. 600'
-          },
-          column_three: {
-            image: require('./images/download (3).jpeg'),
-            product_name: 'Product Name',
-            description: 'Lorem ipsum dolor sit',
-            prize: 'Rs. 600'
-          }
+      components_submenu: [
+        {
+          title: 'Buttons'
         },
-        two_column_listing: {
-          title: "2 Column Listing",
-          column_one: {
-            image: require('./images/download(4).jpeg'),
-            product_name: 'Product Name',
-            description: 'Lorem ipsum dolor sit amet',
-            prize: 'Rs. 600'
-          },
-          column_two: {
-            image: require('./images/download(6).jpeg'),
-            product_name: 'Event Name',
-            description: 'Lorem ipsum',
-            place: 'Shanghai, China',
-            day: 'Mon,6 May 2018',
-            time: '7:00 PM'
-          },
-          column_three: {
-            image: require('./images/home.jpg'),
-            product_name: 'Product Name',
-            desc: 'Posted On',
-            description: 'Monaco,Europe',
-            day: '06 May 2018',
-            prize: 'Rs.4.85 Crors'
-          },
-          column_four: {
-            image: require('./images/Events.jpg'),
-            product_name: 'Product Name',
-            description: 'Lorem ipsum dolor sit',
-            prize: 'Rs. 600'
-          }
-        },
-        single_column_listing: {
-          title: "Single  listing",
-          column_one: {
-            image: require('./images/home.jpg'),
-            product_name: 'Product Name',
-            description: 'Lorem ipsum dolor sit',
-            prize: 'Rs.4.85 Crors'
-          },
-          column_two: {
-            image: require('./images/download(10).jpeg'),
-            product_name: 'Product Name',
-            description: 'Lorem ipsum dolor sit',
-            prize: 'Rs. 600'
-          }
+        {
+          title: 'Cards'
         }
-      }
+      ],
+
     }
   }
 
-  handelClick = () => {
-    console.log("dfghjk");
-    this.setState({ isClicked: !this.state.isClicked });
-  }
 
   updateActiveMenu = (active_menu_item) => {
     this.setState({ active_menu_item });
@@ -150,8 +86,9 @@ export default class App extends Component {
               userdata={this.state.userProfile}
               active_menu_item={this.state.active_menu_item}
               updateActiveMenu={this.updateActiveMenu}
-              subform={this.state.form_types}
+              subform={this.state.form_submenu}
               subpage={this.state.pages_submenu}
+              subcomponent={this.state.components_submenu}
             />
 
             <Switch>
@@ -172,8 +109,12 @@ export default class App extends Component {
                 render={props => (<Calender />)}
               />
 
-              <Route path="/components"
+              <Route path="/components/0"
                 render={props => (<ButtonLayoutContainer />)}
+              />
+
+              <Route path="/components/1"
+                render={props => (<CardLayoutContainer />)}
               />
 
               <Route path="/pages/0"

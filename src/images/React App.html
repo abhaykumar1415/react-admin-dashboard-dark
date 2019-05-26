@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://localhost:3000/components/1 -->
+<html lang="en" class="gr__localhost"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <link rel="shortcut icon" href="http://localhost:3000/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="http://localhost:3000/manifest.json">
+  <link rel="stylesheet" href="./React App_files/icon">
+  <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>React App</title>
+<style type="text/css">body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+</style><style type="text/css">
+.profile-img{
+  width: 23%;
+  border-radius: 300px;
+  height: 55px;
+}
+.image-profile-name{
+  display: flex;
+  margin-bottom: 21px;
+}
+
+.edit-button{
+  padding: 11px 18px;
+  border-radius: 3px;
+  margin-right: 13px;
+  background-color: #262D40;
+  color: white;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.upgrade-button{
+  padding: 11px 22px;
+  border-radius: 3px;
+  /* margin-right: 12px; */
+  background-color: #0160E8;
+  border: 1px solid transparent;
+  color: white;
+  cursor: pointer;
+}
+.drawer{
+  width: 18%;
+  background-color: #0E1322;
+}
+.drawer-profile{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding:35px 12px 85px 16px;
+  flex-direction: column;
+}
+.list-item-width{
+  width:100%;
+}
+.listitem{
+  padding:20px;
+  font-size: 12px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+.list-item-arrow{
+  margin-left: 90px;
+  color: #373D4D;
+}
+.font-clr-white{
+  color:white;
+}
+.font-clr-whitesmoke{
+  color: whitesmoke;
+}
+.profile-name{
+  font-size: 17px;
+  padding-left: 20px;
+}
+.user-role{
+  font-size: 12px;
+}
+.drawer-list{
+  /* padding-left:30px; */
+}
+.list-icon-padding{
+  padding-right: 10px;
+}
+.list-subitem{
+  cursor: pointer;
+  font-size: 12px;
+  padding: 10px 0px;
+}
+.subitems{
+  padding-left:70px;
+}</style><style type="text/css">.basic-form-wrapper{
+  background-color: #0E1322 ;
+  height: 600px;
+  width:47%;
+  border-radius: 8px;
+}
+
+.form-header{
+  font-size: 15px;
+  color: #FAFBFD;
+  padding:10px;
+  text-align: center;
+  background-color: #070B17;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.form-content{
+  /* padding:25px 35px 25px 35px; */
+  padding: 39px 35px 39px 35px;
+}
+
+.names{
+  display:flex;
+  justify-content: space-between;
+}
+
+.text-input{
+  border:none;
+  background-color: #0E1322;
+  border-bottom:1px solid #545A68;
+  width:100%;
+  padding:10px 0px;
+  /* outline:none; */
+}
+
+.contact-verify{
+  padding:10px;
+  margin-top: 20px;
+}
+
+.checkbox-grp{
+  display:flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 30px;
+}
+
+h5{
+  color:#545A68;
+  padding-left: 5px;
+}
+
+.verify-data{
+  display: flex;
+  align-items: center;
+  width: 150px;
+}
+
+.text-fileds{
+  padding:22px 11px 22px 10px;
+}
+
+.input-placeholder{
+  color:#545A68;
+  padding:10px 10px 10px 0px;
+  font-size:12px;
+}
+
+.form-buttons{
+  padding-bottom: 55px;
+  text-align: center;
+}
+
+.form-btn{
+  border-radius: 5px;
+  color: white;
+  margin-right: 23px;
+  border: none;
+  padding: 14px 37px;
+}
+
+.cancel-btn-clr{
+  background-color: #3E3F53;
+}
+
+.login-btn-clr{
+  background-color:blue; 
+}</style><style type="text/css">.form-wrapper{
+  background-color: black;
+  height: 200px;
+  margin: 50px;
+  color:white;
+  font-size:10px;
+}
+
+.username-icon-clr{
+  color: #545A68;
+  border-bottom: 1px solid #545A68;
+}
+
+.iconic-text-fields{
+  display:flex;
+}</style><style type="text/css">.horizontal-form-wrapper{
+  background-color: #0E1322;
+  /* width: 90%;
+  margin-left: 60px; */
+  margin-bottom: 50px;
+  border-radius: 9px;
+}
+
+.verification{
+  display: flex;
+  justify-content: space-between;
+  color: #545A68;
+  font-size: 12px;
+}
+
+.forgot-password{
+  color:blue;
+}</style><style type="text/css">.two-column-form-wrapper{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.column-form-wrapper{
+  width:45%;
+  height: 500px;
+}
+
+.two-column-form{
+  /* margin-left: 60px;
+  width: 90%; */
+  background-color: #0E1322;
+}
+
+.text-area{
+  background-color:#060C1B;
+  margin: 12px;
+  border: none;
+}
+</style><style type="text/css">.basic-iconic-forms{
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0px 50px 0px;
+}
+
+.forms{
+  width: 86% !important;
+    padding: 26px;
+}</style><style type="text/css">.font-size-30{
+  font-size: 30px;
+}
+.header-wrapper{
+  background-color: #0E1322;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding:0px;
+  top: 0;
+  position: fixed;
+  right: 0;
+  left: 0;
+}
+
+.search-icon{
+  display: flex;
+  margin-top: 7px;
+  color: white;
+  margin-left: 19%;
+}
+
+.menu-content-wrapper{
+  display: flex;
+  /* margin-top: 8px; */
+  width: 300px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.size-30{
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 29px;
+}
+
+.font-size{
+  font-size: 13px;
+  margin-top: 1px;
+}
+
+.color-gray{
+  color: gray;
+  border: 0;
+  font-size: 12px;
+  background-color:#0E1322; 
+}
+
+.margin{
+  margin-right: 4px;
+}
+
+.profile-wrapper{
+  display: flex;
+  align-items: center;
+}
+
+.logout{
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-img-header{
+  width: 24%;
+  border-radius: 18px;
+  height: 36px;
+  margin-right: 6px;
+}
+
+.menuItem{
+  background-color:#0E1322; 
+}
+
+.color-white{
+  color: white;
+}</style><style type="text/css">.content-wrapper{
+  display: flex; 
+  background-color: #262D40;
+  padding-top:30px;
+}
+.App{
+  width: 100%;
+  /* display: flex;
+  flex-direction: row; */
+}
+
+.content-navigation-wrapper{
+  display: flex;
+  background-color: #262D40;
+  padding-top: 40px;
+}
+.logout-btn{
+  width: 100px;
+  height: 40px;
+  background-color: blue;
+  position: absolute;
+  top: 60px;
+  left: 1272px;
+  border-radius: 20px;
+}
+</style><style type="text/css">.content{
+  margin:60px 45px;
+}
+.dashboard-header{
+  color: white;
+  font-size: 30px;
+  padding-bottom: 70px;
+  font-weight: 600;
+}
+
+.chart{
+  /* margin:10px;
+  background-color: black; */
+  width: 1100px !important;
+  height: 300px !important;
+   /* background-color: black;  */
+  /* margin: 35px 0px 0px 50px; */
+}
+.product-scale-heading{
+  color: white; 
+}
+.product-scale{
+  background-color: #0E1322; 
+  width: 100%;
+  /* margin: 30px 40px; */
+  border-radius: 10px;
+}
+.product-scale-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+.product-scale-yr-list{
+  background-color: blue;
+  border: none;
+  color: white;
+  width: 53px;
+  height: 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 3px;
+}
+.visitors{
+  background-color: #0E1322;
+  width:28%;
+  border-radius: 10px;
+  padding: 15px;
+}
+.visitor-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 5px 25px 5px;
+}
+.eye-icon{
+  padding: 10px;
+  font-size: 40px;
+}
+.visitor-icon{
+  width: 60px;
+  height: 60px;
+  /* background-color: #3cdcea; */
+  /* margin: 15px 0px 25px 0px; */
+  border-radius: 100px;
+}
+.visit-no{
+  /* color: #3cdcea; */
+  font-size:30px;
+  font-weight: bold;
+}
+.font-white{
+  color: whitesmoke;
+  font-size:14px;
+}
+.visitor-info{
+  display: flex;
+  justify-content: space-between;
+  margin-top:50px;
+}
+
+
+/* mayuri */
+
+.content-header{
+  text-align: left;
+  font-size: 28px;
+  color: white;
+  font-weight: 600;
+  margin: 0px 0px 100px 39px;
+}
+
+.main-content{
+  margin-top: 62px;
+}
+
+.email-statistics{
+  display: flex;
+  width: 100%;
+  display: flex;
+}
+
+.task-activity{
+  display: flex;
+  width: 100%;
+}
+
+.main-content-wrapper{
+  width:76% !important; 
+}
+
+/* .content-four-tasks{
+  padding: 20px 0px 0px 30px;
+  display: flex;
+  flex-direction: column;
+} */
+</style><style type="text/css">.email-wrapper{
+  background-color: #0F1424;
+  color: white;
+  /* margin-left: 3%; */
+  border-radius: 10px;
+  padding: 33px 0px 87px 28px;
+  width: 50%;
+}
+
+.email-header{
+  font-size: 20px; 
+}
+
+.color{
+  color: #FBFFFF;
+}
+
+.rate{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 33px;
+  font-size: 12px;
+  width: 81%;
+}
+
+.myProgress {
+  width: 82%;
+  background-color: gray;
+  margin-top: 13px;
+  border-radius: 12px;
+}
+
+.myBar {
+  width: 75%;
+  height: 4px;
+  background-color: #0160E8;
+  border-radius: 17px;
+  line-height: 30px;
+}
+
+.rate-time{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9px;
+  font-size: 12px;
+  width: 81%;
+}
+
+.percentage{
+  font-size: 20px;
+}</style><style type="text/css">.task-activity-content{
+  display: flex;
+}
+.task-wrapper{
+  margin: 45px 0px 16px 0px;
+  background-color: #0F1424;
+  color: white;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.task-activity-header{
+  margin: 23px 0px 0px 31px;
+  font-size: 20px;
+}
+
+.list-wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.list-content{
+  border-bottom: 1px solid #262D40;
+  padding:31px 13px 13px 28px;
+}
+
+.selection-wrapper{
+  display: flex;
+}
+
+.margin-right{
+  margin-right: 4px;
+}
+
+.status_pending{
+  border: 1px solid #0F1424;
+  background-color: #212336;
+  border-radius: 14px;
+  font-size: 12px;
+  color: white;
+  padding: 3px 23px 4px 23px;
+}
+
+.status_completed{
+  border: 1px solid #0F1424;
+  background-color: #0160E8;
+  border-radius: 14px;
+  font-size: 12px;
+  color: white;
+  padding: 2px 16px 4px 16px;
+}
+
+.view-all-button{
+  text-align: center;
+  margin: 25px 0px 25px 0px;
+  cursor: pointer;
+}
+
+.profile-image{
+  width: 8%;
+  border-radius: 300px;
+  height: 47px;
+  margin-right: 30px;
+  
+}
+
+.activity-content-wrapper::after{
+  content: '';
+  border: 1px solid #272C3F;
+  position: absolute;
+  top: 47px;
+  left: 19px;
+  height: 51px;
+}
+
+.activity-content-wrapper:last-child::after {
+  border: 1px solid transparent;
+}
+
+.activity-content-wrapper{
+  display: flex;
+  margin-bottom: 47px;
+  position: relative;
+}
+
+.description{
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.activity-name{
+  width: 80%;
+}
+
+.activity-proofile-name{
+  color: #0160E8;
+  margin-bottom: 10px;
+ 
+}
+
+.font-weight{
+  font-weight: 700;
+}
+
+.font-size{
+  font-size: 10px;
+}
+
+.checkbox{
+  margin-right: 8px;
+}</style><style type="text/css">.statistics-wrapper {
+  background-color: #0F1424;
+  color: white;
+  margin-left: 3%;
+  border-radius: 10px;
+  padding: 33px 0px 87px 28px;
+  width: 50%;
+}
+
+.statistics-header {
+  font-size: 20px; 
+}
+
+.color {
+  color: #FBFFFF;
+}
+
+.rate {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 38px;
+  font-size: 12px;
+  width: 81%;
+}
+
+.myProgress {
+  width: 82%;
+  background-color: gray;
+  margin-top: 13px;
+  border-radius: 12px;
+}
+
+.myBar {
+  height: 4px;
+  background-color: #0160E8;
+  border-radius: 17px;
+  line-height: 30px;
+}
+
+.rate-time {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9px;
+  font-size: 12px;
+  width: 81%;
+}
+
+.percentage {
+  font-size: 20px;
+}</style><style type="text/css">.activity-wrapper{
+  margin: 45px 0px 16px 25px;
+  background-color: #0F1424;
+  color: white;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.task-activity-header{
+  margin: 23px 0px 0px 31px;
+  font-size: 20px;
+
+}
+
+.list-wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.list-content{
+  border-bottom: 1px solid #262D40;
+  padding:31px 13px 13px 28px;
+}
+
+.selection-wrapper{
+  display: flex;
+}
+
+.margin-right{
+  margin-right: 4px;
+}
+
+.status-pending{
+  border: 1px solid #0F1424;
+  background-color: #212336;
+  border-radius: 14px;
+  font-size: 12px;
+  padding: 3px 23px 4px 23px;
+}
+
+.status-completed{
+  border: 1px solid #0F1424;
+  background-color: #0160E8;
+  border-radius: 14px;
+  font-size: 12px;
+  padding: 2px 16px 4px 16px;
+}
+
+.view-all-button{
+  text-align: center;
+  margin: 25px 0px 25px 0px;
+  cursor: pointer;
+}
+
+.profile-image{
+  width: 8%;
+  border-radius: 300px;
+  height: 47px;
+  margin-right: 30px;
+  
+}
+
+.activity-content-wrapper::after{
+  content: '';
+  border: 1px solid #272C3F;
+  position: absolute;
+  top: 47px;
+  left: 19px;
+  height: 51px;
+}
+
+.activity-content-wrapper:last-child::after {
+  border: 1px solid transparent;
+}
+
+.activity-content-wrapper{
+  display: flex;
+  margin-bottom: 47px;
+  position: relative;
+}
+
+.description{
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.activity-name{
+  width: 80%;
+}
+
+.activity-proofile-name{
+  color: #0160E8;
+  margin-bottom: 10px;
+}
+
+.font-weight{
+  font-weight: 700;
+}
+
+.font-size{
+  font-size: 10px;
+}
+
+.activity-list{
+  border-bottom: 1px solid #262D40;
+  padding:31px 13px 13px 28px;
+}</style><style type="text/css">.color-white{
+  color: white;
+}
+
+.header{
+  font-size: xx-large;
+  margin-bottom: 8px;
+}
+
+.font-size-small{
+  font-size: small;
+}
+
+.layout-container{
+  padding-top: 15px;
+}
+
+.button_with_sizes{
+  display: flex;
+  background-color: #101420;
+  margin-bottom: 2px;
+  padding: 22px 26px;
+}
+
+.margin-right{
+  margin-right: 234px;
+}
+
+.layout-container-wrapper{
+  padding: 40px 18px 44px 23px;
+  width: 86% !important;
+}
+
+.dropdown-btn-content{
+  background-color: #101420;
+  display: flex;
+  padding: 29px 0px 32px 25px;
+}
+
+.square_rounded_button_group_wrapper{
+  background-color: #101420; 
+}
+
+.button-style{
+  margin-top: 50px;
+}
+
+.padding{
+  padding: 15px 0px 0px 23px;
+}
+
+.square_rounded_button_content{
+  display: flex;
+  flex-flow: wrap;
+  padding: 10px 0px 16px 24px;
+  margin-bottom: 2px;
+}
+
+.background_black{
+  background-color: #101420;
+  margin-bottom: 2px;
+}
+
+.multiple_buttons{
+  display: flex;
+}
+
+.vertical_group{
+  display: flex;
+  padding: 25px;
+}
+
+.width-25{
+  width: 25%;
+}
+</style><style type="text/css">.color-white{
+  color: white;
+}
+
+.color-black{
+  color: black;
+}
+.font-size-small{
+  font-size: small;
+}
+
+.font-weight{
+  font-weight: 600;
+}
+
+.button-style{
+  margin-top: 50px;
+}
+
+.button-style-wrapper{
+  background-color: #101420;
+  padding: 15px 0px 20px 25px;
+  margin-bottom: 2px;
+  border-radius: 2px;
+}
+
+.square-outline{
+  padding: 11px 32px;
+  font-weight: 400;
+}
+
+.margin-bottom{
+  margin-bottom: 20px;
+}
+
+.buttons-wrapper{
+  display: flex;
+}
+
+.button_sizes_wrapper{
+  display: flex;
+}</style><style type="text/css">.button-content-wrapper{
+  margin-right: 38px;
+}
+
+.button-content_style{
+  font-size: 'small';
+  padding: 11px 32px;
+  font-weight: '500';
+}
+
+.outline_style{
+  border: "1px solid this.props.color";
+  color: "this.props.color";
+  border-radius: '4px';
+}</style><style type="text/css">.dropdown-wrapper{
+  display: flex;
+  margin-right: 33px;
+  padding: 7px;
+}
+
+.action-button{
+  border: 1px solid transparent;
+  font-size: 12px;
+  font-weight: 500;
+}</style><style type="text/css">.button-group-wrapper{
+  background-color: #101420;
+  display: flex;
+  margin: 12px 240px 20px 0px;
+}
+
+.rounded-left-corner{
+  border-radius: 20px 0px 0px 20px;
+}
+
+.rounded-right-corner{
+  border-radius: 0px 20px 20px 0px;
+}
+
+.group-button{
+  padding: 12px 35px;
+  border: 1px solid ;
+}
+
+/* .button_group_content{
+
+} */
+
+
+
+</style><style type="text/css">.multiple_button_wrapper{
+  padding: 23px;
+}
+
+.multiple_button_style{
+  padding: 6px 12px;
+ 
+}
+
+.multiple_buttons{
+
+}</style><style type="text/css">.vertical_group_wrapper{
+  display: flex;
+  flex-direction: column;
+  margin-right: 41px;
+   
+}
+
+.vertical_grp_style{
+  padding: 7px 32px 7px 32px;
+  font-size: 12px;
+  font-weight: 400;
+}</style><style type="text/css">.listing-wrapper{
+  width: 86% !important;
+  padding: 30px 22px;
+}
+
+.layout-header{
+  font-size: 28px;
+}
+
+.column-listing{
+  display: flex;
+  width: 97%;
+  padding: 0px 15px 15px 15px;
+}
+
+.two-column-listing{
+  display: flex;
+  flex-direction: column;
+  width: 97%;
+  padding: 0px 15px 15px 15px;
+}
+
+.column-listing-parts{
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.images{
+  /* position: relative; */
+  width: 100%;
+  height: 340px;
+}
+
+.third-image{
+  width: 100%;
+  height: 380px;
+}
+
+.two-column-images{
+  width: 50%;
+  height: 226px;
+}
+
+.second-column-images{
+  width: 100%;
+  height: 205px;
+}
+
+.three-column-images{
+  width: 100%;
+  height: 226px;
+}
+
+.display{
+  display: flex;
+}
+
+.title-style{
+  font-size: 15px;
+  font-family: -webkit-body;
+  font-weight: 600;
+  margin-left: 16px;
+}
+
+.three-listing-column{
+  width: 33%;
+  margin-right: 15px;
+  /* margin-left: 20px; */
+  background-color: #0E1322;
+}
+
+.two-listing-column{
+  width:50%;
+  background-color: #0E1322;
+  height: 180px;
+  /* margin-right: 15px; */
+}
+.product-name{
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 400;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.third-product-name{
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 9px;
+}
+
+.prod-description{
+  font-size: 13px;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-description{
+  font-size: 12px;
+  font-family: sans-serif;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.product-prize{
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 400;
+  margin-bottom: 3px;
+  display: flex;
+}
+
+.strike{
+  margin-right: 4px;
+  color: gray;
+  font-weight: 400;
+}
+
+.listing-data{
+  padding: 10px;
+}
+
+.product-listing{
+  padding: 30px 0px 0px 30px;
+  width: 90%;
+}
+
+.product-add{
+  margin-top: 10px;
+}
+
+.add-button{
+  background-color: #0060E7;
+  border: 1px solid transparent;
+  margin-right: 5px;
+  border-radius: 2px;
+  font-weight: 800;
+  padding: 3px 10px;
+}
+
+.plus-button{
+  background-color: #0060E7;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-weight: 800;
+  padding: 3px 7px;
+}
+
+.two-listing-column-content-three{
+  width:50%;
+  background-color: #0E1322;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 352px;
+}
+
+.two-listing-column-content-four{
+  width:50%;
+  background-color: #0E1322;
+  /* margin-right: 15px; */
+  display: flex;
+  flex-direction: column;
+  height: 352px;
+}
+
+.rating-tickets{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 22px;
+}
+
+
+.fourth-content-images{
+  width: 30%;
+  height: 200px;
+}
+
+.fourth-column-images{
+  width: 32%;
+  height: 200px; 
+}
+
+.listing-column{
+  width:97%;
+  background-color: #0E1322;
+  margin-bottom: 16px;
+}
+
+
+.single-product-listing{
+  padding: 52px 21px 0px 49px;
+  width: 68%;
+}
+
+.name-and-icon{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.font-size-12{
+  font-size: 12px;
+}
+
+.home-description{
+  display: flex;
+  font-size: 13px;
+  margin-bottom: 20px;
+  color: #0060E7;
+}
+
+.furnished{
+  margin-right: 30px;
+}
+
+.contact{
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-button{
+  padding: 0px 20px;
+  background-color: #0060E7;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+.star-rating{
+  margin-right: 15px;
+}
+
+.rating{
+  display: flex;
+  justify-content: space-between;
+}
+
+.three-column-images-one{
+  width: 50%;
+  background-color: #0E1322;
+  margin-right: 15px;
+}
+
+.two-listing-column-one{
+  width:50%;
+  background-color: #0E1322;
+  margin-right: 15px;
+  height: 180px;
+}
+
+.two-listing-column-images{
+  width: 40%;
+  height: 170px;
+  padding: 5px;
+
+}
+
+.two-listing-column-image{
+  width: 47%;
+  height: 180px;
+}
+
+.star-button{
+  padding: 3px 9px;
+  border-radius: 2px;
+  background-color: #0060E7;
+  display: flex;
+  font-size: 12px;
+  border: 1px solid transparent;
+}
+
+.rate-button{
+  padding: 3px 0px;
+  border-radius: 2px;
+  /* background-color: #0060E7; */
+  display: flex;
+  /* font-size: 12px; */
+  border: 1px solid transparent;
+}
+
+.three-listing-second-image{
+  width: 100%;
+  height: 360px;
+}
+
+.bottom-left {
+  bottom: 8px;
+  left: 16px;
+}
+
+.day-time{
+  /* display: flex;
+  flex-direction: row; */
+  font-size: 12px;
+  font-family: sans-serif;
+  font-weight:500;
+  margin-bottom: 3px;
+  display: flex;
+    justify-content: space-between;
+}
+
+.material-size{
+  font-size: 12px;
+  margin-right: 6px;
+}</style><style type="text/css">.layout-container{
+  padding-top: 15px;
+}
+
+.layout-container-wrapper{
+  /* padding: 40px 18px 44px 23px; */
+}
+
+.header{
+  font-size: xx-large;
+  margin-bottom: 8px;
+}
+
+.font-size-small{
+  font-size: small;
+}
+
+
+.search_bar{
+  display: flex;
+  background-color:#FFFFFF; 
+}
+
+.type_search{
+  color: gray;
+  border: 0;
+  font-size: 12px;
+  background-color:#FFFFFF; 
+}
+
+.font-size-20{
+  font-size: 20px;
+}
+
+</style><style type="text/css">.tabel_content_wrapper{
+  display: flex;
+  background-color: #101420;
+  padding: 6px 13px 10px 13px;
+  margin-bottom: 2px;
+}
+
+.tabel_content_header{
+  width: 20%;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.input_search_wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.content_list{
+  display: flex;
+  background-color: #101420;
+  padding:  18px 0px 18px 15px;
+  margin-bottom: 2px;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: sans-serif;
+}
+
+.item_name{
+  margin-right:119px;
+}
+
+.color-white{
+  color: white;
+}
+
+.items{
+  width: 20%;
+}
+
+.entries{
+  margin-top: 20px;
+}
+
+.sort{
+  display: flex;
+  flex-direction: column;
+  margin-left: 124px;
+}
+
+.font-size-20{
+  cursor: pointer;
+}</style><style type="text/css">.card-header{
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.user-profiles{
+  display: flex;
+  /* padding: 40px; */
+  color: white;
+  font-size: 13px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.notes-card-column{
+  background-color: #0E1322;
+  width: 25%;
+}
+
+.card_columns{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+
+
+
+.profile-img-div{
+  /* padding: 30px 20px; */
+}
+
+
+
+.todos{
+  width:30%;
+  background-color: #0E1322;
+ }
+ 
+
+.todo_card{
+  padding: 20px;
+  margin: 15px;
+  background-color: white;
+}
+
+.todo_image{
+  width: 16%;
+  border-radius: 45px;
+  height: 55px;
+  padding: 7px;
+}
+
+.todo_images{
+  display: flex;
+}
+
+.clr_white{
+  color: white;
+}
+
+
+
+.img_div{
+
+}</style><style type="text/css"></style><style type="text/css">.user-profile{
+  text-align: center;
+  background-color: #0E1322;
+  margin-right: 10px;
+  padding: 28px 0px 47px 0px;
+  width: 33%;
+
+}
+
+.user-profile-img{
+  width:33%;
+  border-radius: 65px;
+  border: 1px solid transparent;
+}
+
+.user-name{
+  margin-top: 14px;
+  font-size: 13px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.user-email{
+  color: cornflowerblue;
+  margin-top: 30px;
+}
+
+.user-role{
+  margin-top: 11px;
+  font-weight: 500;
+}
+
+.clr_darkgray{
+  color: darkgray;
+  
+}</style><style type="text/css"></style><style type="text/css"></style><style type="text/css">.notes-card{
+  padding: 20px;
+  background-color: white;
+  margin: 15px;
+}</style><style data-jss="" data-meta="MuiModal">
+.MuiModal-root-3 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1300;
+  position: fixed;
+}
+.MuiModal-hidden-4 {
+  visibility: hidden;
+}
+</style><style data-jss="" data-meta="MuiPopover">
+.MuiPopover-paper-2 {
+  outline: none;
+  position: absolute;
+  min-width: 16px;
+  max-width: calc(100% - 32px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 16px;
+  max-height: calc(100% - 32px);
+}
+</style><style data-jss="" data-meta="MuiMenu">
+.MuiMenu-paper-1 {
+  max-height: calc(100% - 96px);
+  -webkit-overflow-scrolling: touch;
+}
+</style><script charset="utf-8" src="./React App_files/main.b31a5920c3229b333498.hot-update.js"></script><script charset="utf-8" src="./React App_files/main.7663241136dd666ffa3b.hot-update.js"></script></head>
+
+<body data-gr-c-s-loaded="true">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"><div class="app"><div class="main-wrapper"><div class="header-wrapper"><div class="search-icon margin"><div class="color-gray margin"><i class="material-icons font-size-30">search</i></div><div><input class="color-gray" type="search" placeholder="Search"></div></div><div class="menu-content-wrapper"><i class="material-icons size-30">mail_outline</i><i class="material-icons size-30">notifications_none</i><div class="profile-wrapper"><img src="./React App_files/profile.35def597.png" alt="profile" class="profile-img-header"><div class="font-size"><h4> Leonid Aristov</h4></div><div class="logout"><i class="material-icons size-30 margin ">arrow_drop_down</i></div></div><div><i class="material-icons size-30">menu</i></div></div></div></div><div class="content-wrapper"><div class="drawer"><div class="drawer-profile"><div class="image-profile-name"><img src="./React App_files/profile.35def597.png" alt="profile" class="profile-img"><div class="profile-name"><span class="font-clr-white">Leonid Aristov</span><br><span class="font-clr-whitesmoke user-role">Project Manager</span></div></div><div><button class="edit-button">Edit Profile</button><button class="upgrade-button">Upgrade</button></div></div><div class="drawer-list"><a href="http://localhost:3000/dashboard" style="text-decoration: none;"><div class="font-clr-white listitem"><i class="material-icons list-icon-padding">dashboard</i><div>DASHBOARD</div><i class="material-icons list-item-arrow">chevron_right</i></div></a><a href="http://localhost:3000/apps" style="text-decoration: none;"><div class="font-clr-white listitem"><i class="material-icons list-icon-padding">apps</i><div class="list-item-width">Apps</div><i class="material-icons list-item-arrow">chevron_right</i></div></a><div class="font-clr-white listitem"><i class="material-icons list-icon-padding">calendar_today</i><div class="list-item-width">Calender</div><i class="material-icons list-item-arrow">chevron_right</i></div><div class="font-clr-white listitem"><i class="material-icons list-icon-padding">satellite</i><div class="list-item-width">Components</div><i class="material-icons list-item-arrow">chevron_right</i></div><div class="font-clr-white listitem"><i class="material-icons list-icon-padding">pages</i><div class="list-item-width">pages</div><i class="material-icons list-item-arrow">chevron_right</i></div><div class="font-clr-white listitem"><i class="material-icons list-icon-padding">file_copy</i><div class="list-item-width">Forms</div><i class="material-icons list-item-arrow">chevron_right</i></div><a href="http://localhost:3000/icons" style="text-decoration: none;"><div class="font-clr-white listitem"><i class="material-icons list-icon-padding">wb_sunny</i><div class="list-item-width">Icons</div><i class="material-icons list-item-arrow">chevron_right</i></div></a><a href="http://localhost:3000/table" style="text-decoration: none;"><div class="font-clr-white listitem"><i class="material-icons list-icon-padding">wb_sunny</i><div class="list-item-width">Table</div><i class="material-icons list-item-arrow">chevron_right</i></div></a><a href="http://localhost:3000/location" style="text-decoration: none;"><div class="font-clr-white listitem"><i class="material-icons list-icon-padding">place</i><div class="list-item-width">Location</div><i class="material-icons list-item-arrow">chevron_right</i></div></a><a href="http://localhost:3000/mobileview" style="text-decoration: none;"><div class="font-clr-white listitem"><i class="material-icons list-icon-padding">adb</i><div class="list-item-width">Mobile View</div><i class="material-icons list-item-arrow">chevron_right</i></div></a></div></div><div class="layout-container-wrapper"><div class="user-profiles"><div class="user-profile"><img src="./React App_files/profile.35def597.png" alt="" class="user-profile-img"><div class="user-name">Vrushali Bhosale</div><div class="user-role clr_darkgray">Front End Developer</div><div class="user-email">vrushali.bhosale@qed42.com</div></div><div class="user-profile"><img src="./React App_files/profile.35def597.png" alt="" class="user-profile-img"><div class="user-name">Vrushali Bhosale</div><div class="user-role clr_darkgray">Front End Developer</div><div class="user-email">vrushali.bhosale@qed42.com</div></div><div class="user-profile"><img src="./React App_files/profile.35def597.png" alt="" class="user-profile-img"><div class="user-name">Vrushali Bhosale</div><div class="user-role clr_darkgray">Front End Developer</div><div class="user-email">vrushali.bhosale@qed42.com</div></div></div><div class="card_columns"><div class="todos"><div class="card-header clr_white"><div>ToDo</div><div>Add Task</div></div><div class="todo_card"><div class="todo_date clr_darkgray"><i class="material-icons">watch_later</i>August 24,2018</div><div class="todo_text">Lorem ipsum dolor sit amet consectetur adipiscing elit, sed diam</div><div class="todo_images"><img src="./React App_files/profile.35def597.png" alt="" class="todo_image"><img src="./React App_files/profile.35def597.png" alt="" class="todo_image"><img src="./React App_files/profile.35def597.png" alt="" class="todo_image"></div></div><div class="todo_card"><div class="todo_date clr_darkgray"><i class="material-icons">watch_later</i>August 24,2018</div><div class="todo_text">Lorem ipsum dolor sit amet consectetur adipiscing elit, sed diam</div><div class="todo_images"><img src="./React App_files/profile.35def597.png" alt="" class="todo_image"><img src="./React App_files/profile.35def597.png" alt="" class="todo_image"><img src="./React App_files/profile.35def597.png" alt="" class="todo_image"></div></div><div class="todo_card"><div class="todo_date clr_darkgray"><i class="material-icons">watch_later</i>August 24,2018</div><div class="todo_text">Lorem ipsum dolor sit amet consectetur adipiscing elit, sed diam</div><div class="todo_images"><img src="./React App_files/profile.35def597.png" alt="" class="todo_image"><img src="./React App_files/profile.35def597.png" alt="" class="todo_image"><img src="./React App_files/profile.35def597.png" alt="" class="todo_image"></div></div></div><div class="notes-card-column"><div class="card-header clr_white"><div>Notes</div><div>Add New</div></div><div class="notes-card"><div class=""><h3>Lorem ipsum dolor sit amet</h3></div><div class="">Lorem ipsum dolor sit amet consectetur adipiscing elit, sed diam</div><div class="">August 24,2018</div></div><div class="notes-card"><div class=""><h3>Lorem ipsum dolor sit amet</h3></div><div class="">Lorem ipsum dolor sit amet consectetur adipiscing elit, sed diam</div><div class="">August 24,2018</div></div><div class="notes-card"><div class=""><h3>Lorem ipsum dolor sit amet</h3></div><div class="">Lorem ipsum dolor sit amet consectetur adipiscing elit, sed diam</div><div class="">August 24,2018</div></div></div><div><div class="card-header clr_white"><div>Statistics</div></div><div></div></div></div></div></div></div></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+<script src="./React App_files/bundle.js"></script><script src="./React App_files/1.chunk.js"></script><script src="./React App_files/main.chunk.js"></script><script src="./React App_files/main.d6e02fd8627d33307eee.hot-update.js"></script>
+
+</body></html>

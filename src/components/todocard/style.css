@@ -1,0 +1,19 @@
+.todo_date{
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.todo_text{
+  margin-bottom: 15px;
+}
+
+.time-day{
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo_card{
+  padding: 20px;
+  /* margin: 15px; */
+}

@@ -17,6 +17,7 @@ export default class ButtonWrapper extends Component {
                     title={item.title}
                     color={item.color}
                     buttonType={this.props.title}
+                    padding=''
                   />
                 )
               }) : null
@@ -32,6 +33,7 @@ export default class ButtonWrapper extends Component {
                     title={item.title}
                     btn_bg_color={this.props.button_size_color}
                     buttonType={item.title}
+                    padding=''
                   />
                 )
               })

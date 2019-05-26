@@ -1,0 +1,43 @@
+.notes-card{
+  padding: 14px;
+  /* background-color: white; */
+  margin: 31px 15px 15px 15px;
+  border: 1px solid #262D40;
+  border-top: 5px solid #262D40;
+}
+
+
+.notes-subtitle{
+  font-weight:bold;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.notes-description{
+  margin-bottom: 20px;
+  
+}
+
+.notes-date{
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.font-size-14{
+  font-size: 14px;
+}
+
+.font-weight{
+  font-weight: 100;
+}
+
+.create-icon{
+  border: 1px solid;
+  border-radius: 14px;
+  padding: 2px;
+  font-size: 21px;
+  background-color: #373D4D;
+}

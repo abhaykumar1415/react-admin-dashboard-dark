@@ -55,13 +55,6 @@
   display: flex;
 }
 
-.title-style{
-  font-size: 15px;
-  font-family: -webkit-body;
-  font-weight: 600;
-  margin-left: 16px;
-}
-
 .three-listing-column{
   width: 33%;
   margin-right: 15px;
@@ -75,14 +68,7 @@
   height: 180px;
   /* margin-right: 15px; */
 }
-.product-name{
-  font-size: 18px;
-  font-family: sans-serif;
-  font-weight: 400;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-}
+
 
 .third-product-name{
   font-size: 18px;
@@ -153,7 +139,7 @@
 }
 
 .two-listing-column-content-three{
-  width:50%;
+  /* width:50%; */
   background-color: #0E1322;
   margin-right: 15px;
   display: flex;
@@ -168,13 +154,6 @@
   display: flex;
   flex-direction: column;
   height: 352px;
-}
-
-.rating-tickets{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 22px;
 }
 
 
@@ -274,6 +253,8 @@
   display: flex;
   font-size: 12px;
   border: 1px solid transparent;
+  width: 15%;
+  justify-content: space-between;
 }
 
 .rate-button{
@@ -304,6 +285,7 @@
   margin-bottom: 3px;
   display: flex;
     justify-content: space-between;
+    padding: 6px 17px 11px 0px;
 }
 
 .material-size{
