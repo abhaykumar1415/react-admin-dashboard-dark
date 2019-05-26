@@ -5,6 +5,7 @@ import ProfileCard from '../profilecard';
 import TodoCard from '../todocard';
 import StatisticsCard from '../statisticscard';
 import NoteCard from '../notescard';
+import Chart from 'chart.js';
 
 export default class CardLayoutContainer extends Component {
   constructor() {
@@ -47,10 +48,33 @@ export default class CardLayoutContainer extends Component {
         date: 'August 24,2018'
       },
       stat_card: {
-        title: 'Statistics'
+        title: 'Statistics',
+        data: {
+          labels: ["Jan", "Feb", "March", "April", "May", "June", "July"],
+          datasets: [
+            {
+              label: "Population (millions)",
+              backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", 'red', 'green'],
+              data: [2478, 5267, 7000, 6000, 4000, 8000, 5000]
+            }
+          ]
+        },
+        option: {
+          scaleShowLables: false
+        }
       }
     }
   }
+  chartRef = React.createRef();
+  componentDidMount() {
+    const myChartRef = this.chartRef.current.getContext('2d');
+    new Chart(myChartRef, {
+      type: 'bar',
+      data: this.state.stat_card.data,
+      option: this.state.stat_card.option
+    });
+  }
+
   render() {
     return (
       <div>
@@ -87,7 +111,8 @@ export default class CardLayoutContainer extends Component {
             <div className='card-header clr_white'>
               <div>{this.state.stat_card.title}</div>
             </div>
-            <StatisticsCard stat_card={this.state.stat_card} />
+            <StatisticsCard chartRef={this.chartRef} stat_card={this.state.stat_card} />
+
           </div>
         </div>
       </div >
