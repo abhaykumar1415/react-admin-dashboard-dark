@@ -49,6 +49,7 @@ export default class CardLayoutContainer extends Component {
       },
       stat_card: {
         title: 'Statistics',
+        subtitle: 'Lorem ipsum dolor',
         data: {
           labels: ["Jan", "Feb", "March", "April", "May", "June", "July"],
           datasets: [
@@ -60,7 +61,7 @@ export default class CardLayoutContainer extends Component {
           ]
         },
         option: {
-          scaleShowLables: false
+          scaleShowLables: false,
         }
       }
     }
@@ -74,10 +75,9 @@ export default class CardLayoutContainer extends Component {
       option: this.state.stat_card.option
     });
   }
-
   render() {
     return (
-      <div>
+      <div className="layout-container-wrapper">
         <div className="user-profiles">
           {
             this.state.user_profile_card.map((item, index) => {
@@ -92,7 +92,11 @@ export default class CardLayoutContainer extends Component {
           <div className="todos">
             <div className="card-header clr_white">
               <div>{this.state.todo_card.title}</div>
-              <div>{this.state.todo_card.option}</div>
+              <div className="add-task">
+                <i className="material-icons">
+                  add_circle_outline
+                </i>
+                {this.state.todo_card.option}</div>
             </div>
             <TodoCard todo_card={this.state.todo_card} />
             <TodoCard todo_card={this.state.todo_card} />
@@ -101,18 +105,22 @@ export default class CardLayoutContainer extends Component {
           <div className='notes-card-column'>
             <div className='card-header clr_white'>
               <div>{this.state.notes_card.title}</div>
-              <div>{this.state.notes_card.option}</div>
+              <div className="add-task">
+                <i className="material-icons">
+                  add_circle_outline
+                </i>
+                {this.state.notes_card.option}</div>
             </div>
             <NoteCard notes_card={this.state.notes_card} />
             <NoteCard notes_card={this.state.notes_card} />
             <NoteCard notes_card={this.state.notes_card} />
           </div>
-          <div>
+          <div className="statistics-card-wrapper">
             <div className='card-header clr_white'>
               <div>{this.state.stat_card.title}</div>
+              <div className="cursor-pointer">...</div>
             </div>
             <StatisticsCard chartRef={this.chartRef} stat_card={this.state.stat_card} />
-
           </div>
         </div>
       </div >

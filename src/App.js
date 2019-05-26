@@ -19,7 +19,7 @@ export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      isClicked: false,
+
       active_menu_item: 'dashboard',
       clr_arr: [],
       visitor_data: {
@@ -56,79 +56,10 @@ export default class App extends Component {
           title: 'Cards'
         }
       ],
-      product_listing: {
-        title: 'Listing',
-        three_column_listing: {
-          title: '3 column listing',
-          column_one: {
-            image: require('./images/download (1).jpeg'),
-            product_name: 'Product Name',
-            description: 'Lorem ipsum dolor sit',
-            prize: 'Rs. 600'
-          },
-          column_two: {
-            image: require('./images/download (2).jpeg'),
-            product_name: 'Product Name',
-            description: 'Lorem ipsum dolor sit',
-            prize: 'Rs. 600'
-          },
-          column_three: {
-            image: require('./images/download (3).jpeg'),
-            product_name: 'Product Name',
-            description: 'Lorem ipsum dolor sit',
-            prize: 'Rs. 600'
-          }
-        },
-        two_column_listing: {
-          title: "Two column listing",
-          column_one: {
-            image: require('./images/download(4).jpeg'),
-            product_name: 'Product Name',
-            description: 'Lorem ipsum dolor sit',
-            prize: 'Rs. 600'
-          },
-          column_two: {
-            image: require('./images/download(6).jpeg'),
-            product_name: 'Product Name',
-            description: 'Lorem ipsum dolor sit',
-            prize: 'Rs. 600'
-          },
-          column_three: {
-            image: require('./images/home.jpg'),
-            product_name: 'Product Name',
-            description: 'Lorem ipsum dolor sit',
-            prize: 'Rs. 600'
-          },
-          column_four: {
-            image: require('./images/Events.jpg'),
-            product_name: 'Product Name',
-            description: 'Lorem ipsum dolor sit',
-            prize: 'Rs. 600'
-          }
-        },
-        single_column_listing: {
-          title: "Single  listing",
-          column_one: {
-            image: require('./images/download(7).jpeg'),
-            product_name: 'Product Name',
-            description: 'Lorem ipsum dolor sit',
-            prize: 'Rs.4.85 Crors'
-          },
-          column_two: {
-            image: require('./images/download(8).jpeg'),
-            product_name: 'Product Name',
-            description: 'Lorem ipsum dolor sit',
-            prize: 'Rs. 600'
-          }
-        }
-      }
+
     }
   }
 
-  handelClick = () => {
-    console.log("dfghjk");
-    this.setState({ isClicked: !this.state.isClicked });
-  }
 
   updateActiveMenu = (active_menu_item) => {
     this.setState({ active_menu_item });

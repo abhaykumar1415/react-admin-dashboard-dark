@@ -1,0 +1,36 @@
+.user-profile{
+  text-align: center;
+  background-color: #0E1322;
+  margin-right: 10px;
+  padding: 28px 0px 47px 0px;
+  width: 33%;
+
+}
+
+.user-profile-img{
+  width:33%;
+  border-radius: 65px;
+  border: 1px solid transparent;
+}
+
+.user-name{
+  margin-top: 14px;
+  font-size: 13px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.user-email{
+  color: cornflowerblue;
+  margin-top: 30px;
+}
+
+.user-role{
+  margin-top: 11px;
+  font-weight: 500;
+}
+
+.clr_darkgray{
+  color: darkgray;
+  
+}

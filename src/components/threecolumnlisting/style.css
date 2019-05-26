@@ -1,0 +1,26 @@
+.three-listing-column-wrapper{
+  display: flex;
+}
+
+.title-style{
+  font-size: 15px;
+  font-family: -webkit-body;
+  font-weight: 600;
+  margin-left: 16px 0px 16px 0px;
+}
+
+.product-name{
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 400;
+  margin-bottom: 3px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-tickets{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-top: 22px; */
+}

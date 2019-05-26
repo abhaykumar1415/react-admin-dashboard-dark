@@ -1,0 +1,76 @@
+.two-column-listing-wrapper{
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.product-name{
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 400;
+  margin-bottom: 3px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-tickets{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 22px;
+}
+
+.twolisting-day-time{
+  padding: 11px;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  font-size: 15px;
+}
+
+.view-details{
+  font-size: 13px;
+  padding: 6px 9px;
+  background-color: #0060E7;
+  color: white;
+  font-weight: bold;
+}
+
+.ticket-arrow{
+  margin-top: 10px;
+  display: flex;
+  background-color: #0060E7;
+  cursor: pointer;
+}
+
+.background-color{
+  background-color: #0060E7;
+  border: 1px solid transparent;
+}
+
+.product-details-wrapper{
+  display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.home-details{
+  display: flex;
+  width: 98%;
+}
+
+
+.detail-list{
+  width: 25%;
+  padding: 17px 10px;
+  border: 1px solid transparent;
+  margin-right: 2px;
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0E1322;
+}
+
+.fourth-product-listing{
+  padding: 9px 16px 0px 16px;
+}

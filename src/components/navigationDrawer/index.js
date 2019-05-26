@@ -63,11 +63,11 @@ export default class NavigationDrawer extends Component {
             <div className="list-item-width">Calender</div>
             {
               this.state.components_submenu ?
-                <i class="material-icons list-item-arrow">
+                <i className="material-icons list-item-arrow">
                   expand_more
                     </i>
                 :
-                <i class="material-icons list-item-arrow">
+                <i className="material-icons list-item-arrow">
                   chevron_right
                     </i>
             }
